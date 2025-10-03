@@ -1,0 +1,419 @@
+EXOPLANET DETECTOR PROJESİ - TERİM SÖZLÜĞÜ
+🌟 GENEL KAVRAMLAR
+
+Exoplanet (Dış Gezegen)
+Güneş sistemimizin dışında, başka yıldızların etrafında dönen gezegenler
+Örnek: Dünya'nın çok uzağında, başka bir güneşin çevresinde dönen Jüpiter benzeri gezegen
+
+Transit (Geçiş)
+Bir gezegenin kendi yıldızının önünden geçmesi
+Benzetme: Güneşin önünden geçen bir uçak gibi, ama çok daha uzakta
+
+Light Curve (Işık Eğrisi)
+Bir yıldızın parlaklığının zamana göre değişimini gösteren grafik
+Basitçe: Yıldızın ne kadar parlak olduğunu zaman içinde gösteren çizgi
+
+Phase-Folded (Faz Katlamalı)
+Tekrarlanan olayları üst üste bindirip daha net görme tekniği
+Örnek: Her gün aynı saatte geçen bir olayın fotoğraflarını üst üste koyup deseni görmek
+
+🎯 MİSYON VE UZAY TELESKOPLARI
+
+Kepler Mission (Kepler Misyonu)
+NASA'nın 2009-2018 yılları arasında dış gezegen aramak için yaptığı uzay misyonu
+150,000'den fazla yıldızı sürekli izleyen bir uzay teleskopu
+
+TESS Mission
+Kepler'den sonra 2018'de başlayan yeni dış gezegen avcısı
+Tüm gökyüzünü tarayan, daha parlak yıldızlara odaklanan teleskop
+
+K2 Mission
+Kepler teleskopunun arızalanınca farklı şekilde çalıştırılmış hali (2014-2018)
+
+MAST (Mikulski Archive for Space Telescopes)
+NASA'nın uzay teleskopları verilerini sakladığı dev kütüphane
+Benzetme: Uzaydan çekilen tüm fotoğrafların ve verilerin bulunduğu internet arşivi
+
+SPOC (Science Processing Operations Center)
+TESS verisini işleyen resmi NASA merkezi
+Basitçe: Ham verileri bilim adamlarının kullanabileceği hale getiren yer
+
+🔬 BİLİMSEL ALGORİTMALAR
+
+BLS (Box Least Squares)
+Işık eğrisinde periyodik (düzenli aralıklarla tekrarlanan) düşüşleri bulan matematiksel yöntem
+Benzetme: Düzenli aralıklarla tekrarlanan kalıpları bulmak için kullanılan akıllı hesap makinesi
+
+SNR (Signal-to-Noise Ratio / Sinyal-Gürültü Oranı)
+Gerçek sinyalin (gezegen geçişi) kıyasla rastgele gürültünün ne kadar güçlü olduğu
+Basitçe: Kalabalık bir kafede birinin sesini ne kadar net duyabildiğiniz
+
+Binning (Binleme)
+Veriyi gruplar halinde toplayıp ortalama alarak daha düzgün hale getirme
+Örnek: Her 10 ölçümün ortalamasını alıp daha temiz bir grafik elde etmek
+
+Flatten (Düzleştirme)
+Işık eğrisindeki uzun süreli trend değişimlerini çıkarıp sadece gezegen geçişlerini belirginleştirme
+Benzetme: Dalgalı bir yolun dalgalarını düzeltip sadece çukurları görmek
+
+Normalization (Normalizasyon)
+Verileri standart bir ölçeğe getirme (genelde 0-1 arası veya ortalama=1)
+Basitçe: Farklı ölçeklerdeki verileri karşılaştırılabilir hale getirmek
+
+🤖 YAPAY ZEKA TERİMLERİ
+
+YOLOv8 (You Only Look Once versiyon 8)
+Orijinalde görüntülerde nesne tanıma için yapılmış hızlı bir yapay zeka modeli
+Bu projede: Işık eğrisi grafiklerine bakıp "gezegen var mı yok mu" diyen akıllı sistem
+
+Classification (Sınıflandırma)
+Bir şeyi kategorilere ayırma işlemi
+Bu projede: "Gezegen var" veya "Gezegen yok" diye karar verme
+
+Transfer Learning (Transfer Öğrenme)
+Bir konuda eğitilmiş yapay zekayı başka bir konuya uyarlama
+Benzetme: Araba kullanmasını bilen birinin kamyon kullanmayı daha kolay öğrenmesi
+
+Training (Eğitim)
+Yapay zekaya örnekler gösterip öğretme süreci
+Basitçe: Sisteme binlerce örnek gösterip "böyle olanlar gezegen, böyle olmayanlar değil" diye öğretmek
+
+Validation Set (Doğrulama Seti)
+Eğitim sırasında modelin ne kadar iyi öğrendiğini kontrol ettiğimiz ayrı veri grubu
+Benzetme: Öğrencinin sınav öncesi deneme soruları
+
+Test Set (Test Seti)
+Eğitim bittikten sonra modelin gerçek performansını ölçtüğümüz veri
+Benzetme: Asıl final sınavı
+
+Epoch
+Modelin tüm eğitim verisini bir kez görmesi
+Basitçe: Yapay zekanın tüm ders kitabını baştan sona bir kez okuması
+
+Overfitting (Aşırı Uyum)
+Modelin eğitim verisini ezberleyip yeni verilerde başarısız olması
+Benzetme: Sadece geçen yılın sınav sorularını ezberleyen ama yeni soruları çözemeyen öğrenci
+
+📊 PERFORMANS METRİKLERİ
+
+Accuracy (Doğruluk)
+Toplam tahminlerin yüzde kaçının doğru olduğu
+Basitçe: 100 tahminden 98'i doğruysa %98 accuracy
+
+Precision (Kesinlik)
+"Gezegen var" dediğimiz şeylerin yüzde kaçının gerçekten gezegen olduğu
+Benzetme: 100 kez "yangın var" dediğinizde kaç kez gerçekten yangın çıkmış
+
+Recall (Duyarlılık)
+Gerçekte var olan gezegenlerin yüzde kaçını bulduk
+Benzetme: Şehirdeki 100 yangından kaçını fark etmişsiniz
+
+F1-Score
+Precision ve Recall'un dengeli ortalaması
+Basitçe: Hem yanlış alarm az olsun hem de hiç kaçırmayalım dengesi
+
+Specificity (Özgüllük)
+Gerçekten gezegen olmayan yıldızları ne kadar doğru tespit ettiğimiz
+Basitçe: Yangın olmayan yerlerde kaç kez "yangın yok" demiş olduğunuz
+
+ROC AUC (Receiver Operating Characteristic - Area Under Curve)
+Modelin iyi ve kötü sınıfları ne kadar iyi ayırdığının genel ölçüsü (0-1 arası, 1 mükemmel)
+0.99 gibi bir değer: Neredeyse mükemmel ayrım yapabiliyor
+
+Confusion Matrix (Karışıklık Matrisi)
+Modelin hangi tahminleri doğru/yanlış yaptığını gösteren tablo
+4 kutu: Doğru pozitif, Doğru negatif, Yanlış pozitif, Yanlış negatif
+
+True Positive (TP - Doğru Pozitif)
+Gerçekten gezegen olan ve "gezegen var" dediğimiz durumlar
+
+True Negative (TN - Doğru Negatif)
+Gerçekten gezegen olmayan ve "gezegen yok" dediğimiz durumlar
+
+False Positive (FP - Yanlış Pozitif / Yanlış Alarm)
+Aslında gezegen yok ama biz "gezegen var" demişiz
+Basitçe: Yanlış alarm
+
+False Negative (FN - Yanlış Negatif / Kaçan)
+Aslında gezegen var ama biz "gezegen yok" demişiz
+Basitçe: Gözden kaçan, atladığımız
+
+💻 TEKNİK VE YAZILIM
+
+Flask
+Python ile web sitesi yapma aracı
+Bu projede: Kullanıcı arayüzünü çalıştıran arka plan sistemi
+
+Streamlit
+Python ile hızlı veri analiz arayüzü yapma aracı
+Basitçe: Grafikli, butonlu web sayfası yapmayı kolaylaştıran araç
+
+Matplotlib
+Python'da grafik çizme kütüphanesi
+Basitçe: Işık eğrisi grafiklerini çizen araç
+
+Lightkurve
+NASA verisiyle çalışmayı kolaylaştıran Python kütüphanesi
+Özellik: Kepler ve TESS verisini indirip işlemeye yarıyor
+
+Pandas
+Tablo verilerini işleme kütüphanesi
+Benzetme: Excel'i Python'da kullanmak gibi
+
+NumPy
+Matematiksel hesaplamalar için kütüphane
+Basitçe: Hızlı sayısal işlemler yapan araç
+
+Scikit-learn
+Makine öğrenmesi algoritmaları kütüphanesi
+Bu projede: Logistic Regression ve Random Forest gibi klasik yöntemler için
+
+Ultralytics
+YOLOv8 modelini sağlayan firma/kütüphane
+
+Pillow
+Python'da resim işleme kütüphanesi
+Basitçe: Resimleri açıp kaydetmeye yarayan araç
+
+requirements.txt
+Projenin ihtiyaç duyduğu Python paketlerinin listesi
+Benzetme: Yemek tarifi için gerekli malzemeler listesi
+
+Virtual Environment (.venv)
+Projeye özel izole Python ortamı
+Benzetme: Her proje için ayrı bir çalışma masası
+
+CSV (Comma-Separated Values)
+Virgülle ayrılmış tablo formatı
+Basitçe: Excel gibi ama daha basit, herhangi bir programda açılabilen tablo dosyası
+
+NPY
+NumPy'nin sayısal verileri hızlı kaydetme formatı
+
+PT (PyTorch)
+Eğitilmiş yapay zeka modelinin kaydedildiği dosya formatı
+Basitçe: Eğitilmiş beynin saklandığı dosya
+
+Batch Processing (Toplu İşleme)
+Çok sayıda veriyi otomatik olarak sırayla işleme
+Örnek: 1000 yıldızı tek tek elle değil, otomatik olarak işlemek
+
+API (Application Programming Interface)
+Programların birbirleriyle konuşma yolu
+Bu projede: Web arayüzünün Python koduna komut gönderme yöntemi
+
+JSON
+Verileri yapılandırılmış şekilde taşıma formatı
+Basitçe: Bilgisayarların birbirine veri gönderirken kullandığı dil
+
+Base64
+Resmi metin formatına çevirme yöntemi
+Bu projede: Grafikleri web sayfasına gömmek için
+
+🎨 KULLANICI ARAYÜZÜ
+
+UI (User Interface - Kullanıcı Arayüzü)
+Kullanıcının gördüğü ve tıkladığı ekran
+Basitçe: Projenin web sitesi kısmı
+
+Frontend
+Web sayfasının görünen kısmı (HTML, CSS, JavaScript)
+Benzetme: Bir binanın dış cephesi
+
+Backend
+Web sayfasının arka planındaki işlemleri yapan kısım (Python, Flask)
+Benzetme: Binanın içindeki mekanik sistemleri
+
+Responsive
+Web sayfasının telefon, tablet, bilgisayarda düzgün görünmesi
+
+Loading Animation
+İşlem sırasında görünen "yükleniyor" göstergesi
+
+Gradient
+Renklerin yumuşak geçişi
+Örnek: Maviden mora geçen arka plan
+
+📈 VERİ VE ANALİZ
+
+Dataset (Veri Seti)
+Makine öğrenmesi için kullanılan örnek veriler koleksiyonu
+Bu projede: 976 yıldızın işlenmiş verileri
+
+Label (Etiket)
+Veri örneğinin hangi sınıfa ait olduğu bilgisi
+Bu projede: 0 = gezegen yok, 1 = gezegen var
+
+Stratified Split (Tabakalı Bölme)
+Veriyi bölerken her grupta pozitif/negatif oranını koruma
+Örnek: Her gruptaki gezegen var/yok oranını %50-%50 tutmak
+
+Synthetic Data (Sentetik Veri)
+Bilgisayarla yapay olarak üretilmiş veri
+Bu projede: Gerçekçi negatif örnekler oluşturma (binary yıldız, pulsasyon vb.)
+
+Index.csv
+Veri setindeki her örneğin bilgilerini tutan tablo
+İçerik: Yıldız adı, misyon, periyot, süre vb.
+
+Targets.csv
+İşlenecek yıldızların listesi
+Sütunlar: target (yıldız adı), mission (Kepler/TESS), label (0/1)
+
+Batch_scores.csv
+Her resim için modelin tahmin olasılıklarını içeren dosya
+
+🔧 PROJE ÖZEL TERİMLER
+
+RAW_DIR (Raw Directory)
+İşlenmemiş ham resimlerin bulunduğu klasör
+
+Plots
+İşlenmiş grafik görsellerinin bulunduğu klasör
+
+Models klasörü
+Eğitilmiş yapay zeka modellerinin (best.pt) saklandığı yer
+
+Runs klasörü
+Eğitim sırasında üretilen ara dosyaların tutulduğu yer
+
+Logs klasörü
+İşlem kayıtlarının (hangi yıldız başarılı/başarısız) tutulduğu yer
+
+Confidence Score (Güven Skoru)
+Modelin tahmininden ne kadar emin olduğu (0-100%)
+%99.9 = çok emin, %51 = çok az emin
+
+Threshold (Eşik)
+Karar verme sınırı
+Örnek: Olasılık %50'nin üzerindeyse "gezegen var" de
+
+Inference (Çıkarım)
+Eğitilmiş modelin yeni bir veriyi tahmin etmesi
+Basitçe: Eğitilmiş sistemin yeni bir yıldıza bakıp karar vermesi
+
+Preprocessing (Ön İşleme)
+Ham veriyi modelin anlayacağı hale getirme
+Bu projede: Temizleme, düzleştirme, normalizasyon
+
+Duration (Süre)
+Gezegen geçişinin ne kadar sürdüğü (saat cinsinden)
+
+Period (Periyot)
+Gezegenin yıldızının etrafında tam bir tur dönüş süresi (gün cinsinden)
+
+Depth (Derinlik)
+Gezegen geçerken yıldızın parlaklığının ne kadar azaldığı
+
+Depth_ppm (Parts Per Million - Milyonda)
+Derinliğin milyonda kaç birim olduğu
+Örnek: 5000 ppm = yıldız parlaklığı %0.5 azalmış
+
+Epoch Time (t0)
+İlk gezegen geçişinin tam zamanı
+
+Out-of-Transit (Transit Dışı)
+Gezegen yıldızın önünde değilken, normal parlaklık durumu
+
+In-Transit (Transit İçi)
+Gezegen yıldızın önündeyken, parlaklığın azaldığı dönem
+
+🌌 ASTROFİZİK TERİMLER
+
+KIC (Kepler Input Catalog)
+Kepler teleskopunun izlediği yıldızların kimlik numarası
+Örnek: KIC 8462852
+
+TIC (TESS Input Catalog)
+TESS teleskopunun izlediği yıldızların kimlik numarası
+Örnek: TIC 123456
+
+TOI (TESS Object of Interest)
+TESS'in gezegen adayı olarak işaretlediği yıldızlar
+
+Hot Jupiter
+Jüpiter gibi büyük ama yıldızına çok yakın, çok sıcak gaz gezegeni
+
+Binary Star (İkili Yıldız)
+Birbirinin etrafında dönen iki yıldız sistemi
+Bu da transit gibi parlaklık değişimi yaratır (yanlış alarm kaynağı)
+
+Eclipsing Binary
+Birbirinin önünden geçen ikili yıldız
+Gezegen geçişine benzer sinyal üretir
+
+Stellar Pulsation (Yıldız Nabzı)
+Bazı yıldızların kendi iç dinamikleri nedeniyle düzenli parlaklık değişimi göstermesi
+
+Light Curve Cadence
+Işık eğrisinde ölçümler arası zaman aralığı
+Long cadence: ~30 dakika aralıklı ölçüm
+Short cadence: ~1-2 dakika aralıklı ölçüm
+
+LLC (Long cadence Light Curve)
+Uzun aralıklı ışık eğrisi (Kepler'de ~30 dk)
+
+Flattening Window
+Düzleştirme yaparken kullanılan zaman penceresi genişliği
+Bu projede: 401 ölçüm noktası (~8 gün)
+
+Outliers (Aykırı Değerler)
+Genel desenin dışındaki anormal ölçümler
+Örnek: Kozmik ışın çarpması nedeniyle anlık parlaklık artışı
+
+Sigma
+İstatistiksel olarak ne kadar sapma kabul edilebilir
+5 sigma: Ortalamadan 5 standart sapma uzak
+
+RMS (Root Mean Square)
+Gürültünün ortalama büyüklüğü
+
+Baseline
+Normal parlaklık seviyesi (gezegen geçişi yokken)
+
+🛠️ SCRIPT'LER VE DOSYALAR
+
+01_build_index.py
+Ham resimleri tarayan ve liste oluşturan script
+
+02_split_build_dataset.py
+Veriyi train/val/test olarak bölen ve kopyalayan script
+
+03_train_yolov8_cls.py
+YOLOv8 modelini eğiten script
+
+04_predict_folder.py
+Bir klasördeki tüm resimleri tahmin eden script
+
+05_batch_score_all.py
+Test setinin tamamını değerlendirip CSV'ye yazan script
+
+evaluate_model.py
+Detaylı performans analizi yapan script
+
+generate_more_synthetic_negatives.py
+Yapay negatif örnekler üreten script
+
+qc_check.py
+Kalite kontrol scripti (QC = Quality Control)
+
+START_WEB_UI.bat
+Windows'ta web arayüzünü başlatan toplu iş dosyası
+
+📝 ÖZET
+
+Bu proje, yapay zeka kullanarak uzak yıldızların etrafındaki gezegenleri tespit eden bir sistemdir.
+
+Temel mantığı:
+
+NASA teleskoplarından (Kepler, TESS) yıldızların parlaklık verilerini indir
+
+Matematiksel algoritmalarla (BLS) düzenli parlaklık düşüşlerini bul
+
+Grafikler oluştur (phase-folded light curves)
+
+Yapay zekaya (YOLOv8) bu grafiklere bakıp "gezegen var mı?" sorusunu cevapla
+
+Web arayüzünde sonuçları göster
+
+Proje %98 doğrulukla çalışıyor ve hiçbir gezegeni kaçırmıyor (%100 recall).
