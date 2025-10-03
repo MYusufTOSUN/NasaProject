@@ -1,0 +1,9 @@
+ultralytics>=8.2.0
+streamlit
+pandas
+numpy
+matplotlib
+scikit-learn
+pillow
+tqdm
+

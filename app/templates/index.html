@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Detector - AI-Powered Transit Detection</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #16213e;
+            --bg-card: #1a1a2e;
+            --accent-primary: #00d9ff;
+            --accent-secondary: #7000ff;
+            --accent-tertiary: #ff0080;
+            --text-primary: #ffffff;
+            --text-secondary: #a8b2d1;
+            --success: #00ff88;
+            --warning: #ffaa00;
+            --danger: #ff0044;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a40 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(0, 217, 255, 0.1) 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 217, 255, 0.2);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            position: relative;
+            text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            position: relative;
+        }
+
+        .header .subtitle {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        /* Search Section */
+        .search-section {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .search-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--accent-primary);
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 18px 20px 18px 55px;
+            font-size: 1.1rem;
+            background: var(--bg-secondary);
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: 'Rajdhani', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2300d9ff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+        }
+
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            border-radius: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.5);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 217, 255, 0.1);
+            border-top: 4px solid var(--accent-primary);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        /* Results */
+        .results {
+            display: none;
+        }
+
+        .results.active {
+            display: block;
+        }
+
+        .result-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .result-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+        }
+
+        .result-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            background: var(--bg-secondary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .meta-item i {
+            color: var(--accent-primary);
+            margin-right: 8px;
+        }
+
+        /* Light Curve Plot */
+        .plot-container {
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 217, 255, 0.2);
+        }
+
+        .plot-container img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Prediction Result */
+        .prediction-result {
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(112, 0, 255, 0.1));
+            border: 2px solid var(--accent-primary);
+        }
+
+        .prediction-verdict {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .verdict-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .verdict-icon.positive {
+            color: var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        .verdict-icon.negative {
+            color: var(--danger);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .verdict-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .verdict-text.positive {
+            color: var(--success);
+        }
+
+        .verdict-text.negative {
+            color: var(--text-secondary);
+        }
+
+        .confidence-text {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+        }
+
+        /* Probability Bars */
+        .probability-bars {
+            margin-top: 30px;
+        }
+
+        .prob-item {
+            margin-bottom: 20px;
+        }
+
+        .prob-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .prob-bar {
+            height: 30px;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .prob-fill {
+            height: 100%;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            font-weight: 700;
+            border-radius: 15px;
+        }
+
+        .prob-fill.positive {
+            background: linear-gradient(90deg, var(--success), #00ff88);
+        }
+
+        .prob-fill.negative {
+            background: linear-gradient(90deg, var(--danger), #ff4466);
+        }
+
+        /* Error */
+        .error {
+            display: none;
+            background: rgba(255, 0, 68, 0.1);
+            border: 2px solid var(--danger);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .error.active {
+            display: block;
+        }
+
+        .error i {
+            color: var(--danger);
+            margin-right: 10px;
+        }
+
+        /* Examples */
+        .examples {
+            margin-top: 30px;
+        }
+
+        .examples h3 {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .example-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .chip {
+            background: var(--bg-secondary);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .chip:hover {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .search-section {
+                padding: 25px;
+            }
+
+            .result-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated Stars Background -->
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-planet-ringed"></i> EXOPLANET DETECTOR</h1>
+            <p>AI-Powered Transit Detection System</p>
+            <p class="subtitle">Powered by YOLOv8 & Kepler/TESS Data</p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <h2><i class="fas fa-search"></i> Analyze Target Star</h2>
+
+            <form id="analyzeForm">
+                <div class="input-group">
+                    <label for="targetName">Target Name</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-star"></i>
+                        <input type="text" id="targetName" name="targetName"
+                            placeholder="örn: Kepler-10, KIC 1026032, TIC 12345..." required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="mission">Mission</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-satellite"></i>
+                        <select id="mission" name="mission">
+                            <option value="auto">Auto (All Missions)</option>
+                            <option value="Kepler">Kepler</option>
+                            <option value="K2">K2</option>
+                            <option value="TESS">TESS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" id="analyzeBtn">
+                    <span><i class="fas fa-rocket"></i> ANALYZE NOW</span>
+                </button>
+            </form>
+
+            <!-- Examples -->
+            <div class="examples">
+                <h3><i class="fas fa-lightbulb"></i> Örnek Hedefler:</h3>
+                <div class="example-chips">
+                    <div class="chip" onclick="fillExample('Kepler-10')">Kepler-10</div>
+                    <div class="chip" onclick="fillExample('Kepler-90')">Kepler-90</div>
+                    <div class="chip" onclick="fillExample('TOI 700')">TOI 700</div>
+                    <div class="chip" onclick="fillExample('KIC 8462852')">KIC 8462852 (Tabby's Star)</div>
+                    <div class="chip" onclick="fillExample('HAT-P-7')">HAT-P-7</div>
+                    <div class="chip" onclick="fillExample('KIC 1026032')">KIC 1026032</div>
+                </div>
+                <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.9rem;">
+                    <i class="fas fa-info-circle"></i> Demo Mode: MAST erişimi olmadan sentetik veri ile çalışır
+                </p>
+            </div>
+
+            <!-- Error -->
+            <div class="error" id="errorBox">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="errorMessage"></span>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p><i class="fas fa-satellite-dish"></i> Downloading light curve data...</p>
+            <p style="margin-top: 10px; font-size: 1rem;">This may take 10-30 seconds</p>
+        </div>
+
+        <!-- Results -->
+        <div class="results" id="results">
+            <div class="result-card">
+                <div class="result-header">
+                    <div class="result-title" id="resultTitle">
+                        <i class="fas fa-chart-line"></i> Analysis Results
+                    </div>
+                    <div class="result-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-satellite"></i>
+                            <span id="missionName">Mission</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-database"></i>
+                            <span id="dataPoints">Data Points</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="timeSpan">Time Span</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Light Curve Plot -->
+                <div class="plot-container">
+                    <img id="lightCurvePlot" src="" alt="Light Curve">
+                </div>
+
+                <!-- Prediction Result -->
+                <div class="prediction-result">
+                    <div class="prediction-verdict">
+                        <div class="verdict-icon" id="verdictIcon">
+                            <i class="fas fa-spinner fa-pulse"></i>
+                        </div>
+                        <div class="verdict-text" id="verdictText">Analyzing...</div>
+                        <div class="confidence-text" id="confidenceText"></div>
+                    </div>
+
+                    <div class="probability-bars">
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span><i class="fas fa-check-circle"></i> Exoplanet Probability</span>
+                                <span id="posProb">0%</span>
+                            </div>
+                            <div class="prob-bar">
+                                <div class="prob-fill positive" id="posFill" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="prob-item">
+                            <div class="prob-label">
+                                <span><i class="fas fa-times-circle"></i> No Exoplanet Probability</span>
+                                <span id="negProb">0%</span>
+                            </div>
+                            <div class="prob-bar">
+                                <div class="prob-fill negative" id="negFill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>🌌 Exoplanet Detector v1.0 | Powered by YOLOv8 Classification |
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </p>
+    </div>
+
+    <script>
+        // Generate animated stars
+        function generateStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 100;
+
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        generateStars();
+
+        // Fill example
+        function fillExample(name) {
+            document.getElementById('targetName').value = name;
+        }
+
+        // Form submit
+        document.getElementById('analyzeForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const targetName = document.getElementById('targetName').value.trim();
+            const mission = document.getElementById('mission').value;
+
+            if (!targetName) {
+                showError('Lütfen bir hedef ismi girin');
+                return;
+            }
+
+            // Hide previous results/errors
+            document.getElementById('errorBox').classList.remove('active');
+            document.getElementById('results').classList.remove('active');
+
+            // Show loading
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('analyzeBtn').disabled = true;
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        target_name: targetName,
+                        mission: mission
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Bilinmeyen hata');
+                }
+
+                // Hide loading
+                document.getElementById('loading').classList.remove('active');
+
+                // Show results
+                displayResults(data);
+
+            } catch (error) {
+                document.getElementById('loading').classList.remove('active');
+                showError(error.message);
+            } finally {
+                document.getElementById('analyzeBtn').disabled = false;
+            }
+        });
+
+        function showError(message) {
+            document.getElementById('errorMessage').textContent = message;
+            document.getElementById('errorBox').classList.add('active');
+        }
+
+        function displayResults(data) {
+            // Meta info
+            document.getElementById('resultTitle').innerHTML =
+                `<i class="fas fa-chart-line"></i> ${data.target}`;
+            document.getElementById('missionName').textContent = data.mission;
+            document.getElementById('dataPoints').textContent = `${data.data_points} points`;
+            document.getElementById('timeSpan').textContent = data.time_span;
+
+            // Light curve plot
+            document.getElementById('lightCurvePlot').src =
+                'data:image/png;base64,' + data.plot;
+
+            // Prediction
+            const pred = data.prediction;
+            const isExoplanet = pred.prediction === 'Exoplanet Candidate';
+
+            // Verdict icon
+            const iconEl = document.getElementById('verdictIcon');
+            iconEl.className = 'verdict-icon ' + (isExoplanet ? 'positive' : 'negative');
+            iconEl.innerHTML = isExoplanet ?
+                '<i class="fas fa-check-circle"></i>' :
+                '<i class="fas fa-times-circle"></i>';
+
+            // Verdict text
+            const textEl = document.getElementById('verdictText');
+            textEl.className = 'verdict-text ' + (isExoplanet ? 'positive' : 'negative');
+            textEl.textContent = pred.prediction;
+
+            // Confidence
+            document.getElementById('confidenceText').textContent =
+                `Confidence: ${pred.confidence.toFixed(2)}%`;
+
+            // Probability bars
+            setTimeout(() => {
+                document.getElementById('posProb').textContent =
+                    pred.positive_probability.toFixed(2) + '%';
+                document.getElementById('posFill').style.width =
+                    pred.positive_probability + '%';
+
+                document.getElementById('negProb').textContent =
+                    pred.negative_probability.toFixed(2) + '%';
+                document.getElementById('negFill').style.width =
+                    pred.negative_probability + '%';
+            }, 300);
+
+            // Show results
+            document.getElementById('results').classList.add('active');
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
+</body>
+
+</html>

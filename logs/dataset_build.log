@@ -1,0 +1,46 @@
+[x] Kepler-22 (Kepler) SKIP: Kalite düşük: SNR=2.7, depth=64 ppm
+[x] Kepler-37 (Kepler) SKIP: Kalite düşük: SNR=2.7, depth=120 ppm
+[x] Kepler-283 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] Kepler-396 (Kepler) SKIP: Kalite düşük: SNR=2.8, depth=2047 ppm
+[x] Kepler-409 (Kepler) SKIP: Kalite düşük: SNR=5.5, depth=17 ppm
+[x] Kepler-442 (Kepler) SKIP: Kalite düşük: SNR=1.0, depth=101 ppm
+[x] Kepler-444 (Kepler) SKIP: Kalite düşük: SNR=0.2, depth=19 ppm
+[x] Kepler-7 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] Kepler-30 (Kepler) SKIP: Kalite düşük: SNR=2.8, depth=1512 ppm
+[x] TOI 1338 (TESS) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] HD 209458 (TESS) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] K2-18 (TESS) SKIP: Kalite düşük: SNR=0.3, depth=187 ppm
+[x] GJ 1214 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] GJ 436 (TESS) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 1026032 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 3112889 (Kepler) SKIP: Kalite düşük: SNR=1.1, depth=20 ppm
+[x] KIC 8191672 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 8506955 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 9955598 (Kepler) SKIP: Kalite düşük: SNR=5.5, depth=17 ppm
+[x] KIC 12885242 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 2010192 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 6032730 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 6426556 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 11446443 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 9023880 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 10525024 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 11255763 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 12266636 (Kepler) SKIP: Kalite düşük: SNR=2.5, depth=171 ppm
+[x] KIC 12561209 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 12643786 (Kepler) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] KIC 12785320 (Kepler) SKIP: Kalite düşük: SNR=2.7, depth=210 ppm
+[x] KIC 12862049 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 12961496 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 13069861 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 13125313 (Kepler) SKIP: Kepler LC bulunamadı
+[x] KIC 13188592 (Kepler) SKIP: Kepler LC bulunamadı
+[x] TIC 123938643 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 270557186 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 1403938 (TESS) SKIP: Kalite düşük: SNR=1.8, depth=5075 ppm
+[x] TIC 308919274 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 14180958 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 167692429 (TESS) SKIP: Kalite düşük: SNR=nan, depth=nan ppm
+[x] TIC 278664532 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 300907789 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 360153657 (TESS) SKIP: TESS SPOC LC bulunamadı
+[x] TIC 402231403 (TESS) SKIP: TESS SPOC LC bulunamadı

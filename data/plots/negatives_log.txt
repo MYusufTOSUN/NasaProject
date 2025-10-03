@@ -1,0 +1,774 @@
+==== NEGATIVE PLOTS SUMMARY ====
+Total negatives: 381
+Copied (existing images): 25
+Generated from FITS: 356
+Failed (missing): 0
+
+Output dirs:
+- train: data\plots\train\negatives
+- val: data\plots\val\negatives
+- test: data\plots\test\negatives
+
+==== DETAILED LOGS ====
+[COPY_OUT] split=train src=graphs\images\010013407.png -> data\plots\train\negatives\010013407.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10013407 -> cache=graphs\images\010013407.png
+[COPY_OUT] split=train src=graphs\images\010096600.png -> data\plots\train\negatives\010096600.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10096600 -> cache=graphs\images\010096600.png
+[COPY_OUT] split=train src=graphs\images\010126165.png -> data\plots\train\negatives\010126165.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10126165 -> cache=graphs\images\010126165.png
+[COPY_OUT] split=train src=graphs\images\010170623.png -> data\plots\train\negatives\010170623.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10170623 -> cache=graphs\images\010170623.png
+[COPY_OUT] split=train src=graphs\images\001026032.png -> data\plots\train\negatives\001026032.png
+[COPY] split=train target=KIC 1026032 src=scripts\raw_images\KIC_1026032_Kepler_phase.png -> cache=graphs\images\001026032.png
+[COPY_OUT] split=train src=graphs\images\010288911.png -> data\plots\train\negatives\010288911.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10288911 -> cache=graphs\images\010288911.png
+[COPY_OUT] split=train src=graphs\images\010394263.png -> data\plots\train\negatives\010394263.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10394263 -> cache=graphs\images\010394263.png
+[COPY_OUT] split=val src=graphs\images\010428462.png -> data\plots\val\negatives\010428462.png
+[GENERATE_SYNTHETIC] split=val target=KIC 10428462 -> cache=graphs\images\010428462.png
+[COPY_OUT] split=train src=graphs\images\010474239.png -> data\plots\train\negatives\010474239.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10474239 -> cache=graphs\images\010474239.png
+[COPY_OUT] split=train src=graphs\images\010474340.png -> data\plots\train\negatives\010474340.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10474340 -> cache=graphs\images\010474340.png
+[COPY_OUT] split=train src=graphs\images\010480854.png -> data\plots\train\negatives\010480854.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10480854 -> cache=graphs\images\010480854.png
+[COPY_OUT] split=test src=graphs\images\010489206.png -> data\plots\test\negatives\010489206.png
+[COPY] split=test target=KIC 10489206 src=scripts\raw_images\KIC_10489206_Kepler_phase.png -> cache=graphs\images\010489206.png
+[COPY_OUT] split=train src=graphs\images\010493632.png -> data\plots\train\negatives\010493632.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10493632 -> cache=graphs\images\010493632.png
+[COPY_OUT] split=train src=graphs\images\010525024.png -> data\plots\train\negatives\010525024.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10525024 -> cache=graphs\images\010525024.png
+[COPY_OUT] split=val src=graphs\images\010604157.png -> data\plots\val\negatives\010604157.png
+[GENERATE_SYNTHETIC] split=val target=KIC 10604157 -> cache=graphs\images\010604157.png
+[COPY_OUT] split=train src=graphs\images\010666592.png -> data\plots\train\negatives\010666592.png
+[COPY] split=train target=KIC 10666592 src=scripts\raw_images\KIC_10666592_Kepler_phase.png -> cache=graphs\images\010666592.png
+[COPY_OUT] split=train src=graphs\images\010764423.png -> data\plots\train\negatives\010764423.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10764423 -> cache=graphs\images\010764423.png
+[COPY_OUT] split=test src=graphs\images\010899740.png -> data\plots\test\negatives\010899740.png
+[GENERATE_SYNTHETIC] split=test target=KIC 10899740 -> cache=graphs\images\010899740.png
+[COPY_OUT] split=test src=graphs\images\010902189.png -> data\plots\test\negatives\010902189.png
+[GENERATE_SYNTHETIC] split=test target=KIC 10902189 -> cache=graphs\images\010902189.png
+[COPY_OUT] split=train src=graphs\images\010904533.png -> data\plots\train\negatives\010904533.png
+[GENERATE_SYNTHETIC] split=train target=KIC 10904533 -> cache=graphs\images\010904533.png
+[COPY_OUT] split=val src=graphs\images\011099313.png -> data\plots\val\negatives\011099313.png
+[GENERATE_SYNTHETIC] split=val target=KIC 11099313 -> cache=graphs\images\011099313.png
+[COPY_OUT] split=val src=graphs\images\011105553.png -> data\plots\val\negatives\011105553.png
+[GENERATE_SYNTHETIC] split=val target=KIC 11105553 -> cache=graphs\images\011105553.png
+[COPY_OUT] split=test src=graphs\images\011215550.png -> data\plots\test\negatives\011215550.png
+[GENERATE_SYNTHETIC] split=test target=KIC 11215550 -> cache=graphs\images\011215550.png
+[COPY_OUT] split=train src=graphs\images\011255763.png -> data\plots\train\negatives\011255763.png
+[GENERATE_SYNTHETIC] split=train target=KIC 11255763 -> cache=graphs\images\011255763.png
+[COPY_OUT] split=train src=graphs\images\011288285.png -> data\plots\train\negatives\011288285.png
+[COPY] split=train target=KIC 11288285 src=scripts\raw_images\KIC_11288285_Kepler_phase.png -> cache=graphs\images\011288285.png
+[COPY_OUT] split=train src=graphs\images\001142478.png -> data\plots\train\negatives\001142478.png
+[GENERATE_SYNTHETIC] split=train target=KIC 1142478 -> cache=graphs\images\001142478.png
+[COPY_OUT] split=train src=graphs\images\011425165.png -> data\plots\train\negatives\011425165.png
+[GENERATE_SYNTHETIC] split=train target=KIC 11425165 -> cache=graphs\images\011425165.png
+[COPY_OUT] split=train src=graphs\images\011439760.png -> data\plots\train\negatives\011439760.png
+[GENERATE_SYNTHETIC] split=train target=KIC 11439760 -> cache=graphs\images\011439760.png
+[COPY_OUT] split=test src=graphs\images\011446443.png -> data\plots\test\negatives\011446443.png
+[COPY] split=test target=KIC 11446443 src=scripts\raw_images\KIC_11446443_Kepler_phase.png -> cache=graphs\images\011446443.png
+[COPY_OUT] split=train src=graphs\images\001145417.png -> data\plots\train\negatives\001145417.png
+[GENERATE_SYNTHETIC] split=train target=KIC 1145417 -> cache=graphs\images\001145417.png
+[COPY_OUT] split=val src=graphs\images\001146500.png -> data\plots\val\negatives\001146500.png
+[GENERATE_SYNTHETIC] split=val target=KIC 1146500 -> cache=graphs\images\001146500.png
+[COPY_OUT] split=train src=graphs\images\011559216.png -> data\plots\train\negatives\011559216.png
+[GENERATE_SYNTHETIC] split=train target=KIC 11559216 -> cache=graphs\images\011559216.png
+[COPY_OUT] split=val src=graphs\images\011752906.png -> data\plots\val\negatives\011752906.png
+[COPY] split=val target=KIC 11752906 src=scripts\raw_images\KIC_11752906_Kepler_phase.png -> cache=graphs\images\011752906.png
+[COPY_OUT] split=test src=graphs\images\011857903.png -> data\plots\test\negatives\011857903.png
+[GENERATE_SYNTHETIC] split=test target=KIC 11857903 -> cache=graphs\images\011857903.png
+[COPY_OUT] split=train src=graphs\images\011904151.png -> data\plots\train\negatives\011904151.png
+[COPY] split=train target=KIC 11904151 src=scripts\raw_images\KIC_11904151_Kepler_phase.png -> cache=graphs\images\011904151.png
+[COPY_OUT] split=test src=graphs\images\011977188.png -> data\plots\test\negatives\011977188.png
+[GENERATE_SYNTHETIC] split=test target=KIC 11977188 -> cache=graphs\images\011977188.png
+[COPY_OUT] split=train src=graphs\images\011993076.png -> data\plots\train\negatives\011993076.png
+[GENERATE_SYNTHETIC] split=train target=KIC 11993076 -> cache=graphs\images\011993076.png
+[COPY_OUT] split=val src=graphs\images\012066569.png -> data\plots\val\negatives\012066569.png
+[COPY] split=val target=KIC 12066569 src=scripts\raw_images\KIC_12066569_Kepler_phase.png -> cache=graphs\images\012066569.png
+[COPY_OUT] split=val src=graphs\images\012099936.png -> data\plots\val\negatives\012099936.png
+[GENERATE_SYNTHETIC] split=val target=KIC 12099936 -> cache=graphs\images\012099936.png
+[COPY_OUT] split=test src=graphs\images\012106449.png -> data\plots\test\negatives\012106449.png
+[GENERATE_SYNTHETIC] split=test target=KIC 12106449 -> cache=graphs\images\012106449.png
+[COPY_OUT] split=train src=graphs\images\012252244.png -> data\plots\train\negatives\012252244.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12252244 -> cache=graphs\images\012252244.png
+[COPY_OUT] split=train src=graphs\images\012266636.png -> data\plots\train\negatives\012266636.png
+[COPY] split=train target=KIC 12266636 src=scripts\raw_images\KIC_12266636_Kepler_phase.png -> cache=graphs\images\012266636.png
+[COPY_OUT] split=train src=graphs\images\012302530.png -> data\plots\train\negatives\012302530.png
+[COPY] split=train target=KIC 12302530 src=scripts\raw_images\KIC_12302530_Kepler_phase.png -> cache=graphs\images\012302530.png
+[COPY_OUT] split=train src=graphs\images\012356914.png -> data\plots\train\negatives\012356914.png
+[COPY] split=train target=KIC 12356914 src=scripts\raw_images\KIC_12356914_Kepler_phase.png -> cache=graphs\images\012356914.png
+[COPY_OUT] split=train src=graphs\images\012374999.png -> data\plots\train\negatives\012374999.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12374999 -> cache=graphs\images\012374999.png
+[COPY_OUT] split=val src=graphs\images\012403317.png -> data\plots\val\negatives\012403317.png
+[GENERATE_SYNTHETIC] split=val target=KIC 12403317 -> cache=graphs\images\012403317.png
+[COPY_OUT] split=train src=graphs\images\012470844.png -> data\plots\train\negatives\012470844.png
+[COPY] split=train target=KIC 12470844 src=scripts\raw_images\KIC_12470844_Kepler_phase.png -> cache=graphs\images\012470844.png
+[COPY_OUT] split=train src=graphs\images\012499879.png -> data\plots\train\negatives\012499879.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12499879 -> cache=graphs\images\012499879.png
+[COPY_OUT] split=train src=graphs\images\012557548.png -> data\plots\train\negatives\012557548.png
+[COPY] split=train target=KIC 12557548 src=scripts\raw_images\KIC_12557548_Kepler_phase.png -> cache=graphs\images\012557548.png
+[COPY_OUT] split=val src=graphs\images\012561209.png -> data\plots\val\negatives\012561209.png
+[GENERATE_SYNTHETIC] split=val target=KIC 12561209 -> cache=graphs\images\012561209.png
+[COPY_OUT] split=val src=graphs\images\012600230.png -> data\plots\val\negatives\012600230.png
+[GENERATE_SYNTHETIC] split=val target=KIC 12600230 -> cache=graphs\images\012600230.png
+[COPY_OUT] split=train src=graphs\images\012643786.png -> data\plots\train\negatives\012643786.png
+[COPY] split=train target=KIC 12643786 src=scripts\raw_images\KIC_12643786_Kepler_phase.png -> cache=graphs\images\012643786.png
+[COPY_OUT] split=train src=graphs\images\012771545.png -> data\plots\train\negatives\012771545.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12771545 -> cache=graphs\images\012771545.png
+[COPY_OUT] split=val src=graphs\images\012785320.png -> data\plots\val\negatives\012785320.png
+[COPY] split=val target=KIC 12785320 src=scripts\raw_images\KIC_12785320_Kepler_phase.png -> cache=graphs\images\012785320.png
+[COPY_OUT] split=test src=graphs\images\012793295.png -> data\plots\test\negatives\012793295.png
+[GENERATE_SYNTHETIC] split=test target=KIC 12793295 -> cache=graphs\images\012793295.png
+[COPY_OUT] split=train src=graphs\images\012862049.png -> data\plots\train\negatives\012862049.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12862049 -> cache=graphs\images\012862049.png
+[COPY_OUT] split=train src=graphs\images\012885242.png -> data\plots\train\negatives\012885242.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12885242 -> cache=graphs\images\012885242.png
+[COPY_OUT] split=train src=graphs\images\012919907.png -> data\plots\train\negatives\012919907.png
+[GENERATE_SYNTHETIC] split=train target=KIC 12919907 -> cache=graphs\images\012919907.png
+[COPY_OUT] split=val src=graphs\images\012961496.png -> data\plots\val\negatives\012961496.png
+[GENERATE_SYNTHETIC] split=val target=KIC 12961496 -> cache=graphs\images\012961496.png
+[COPY_OUT] split=train src=graphs\images\013069861.png -> data\plots\train\negatives\013069861.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13069861 -> cache=graphs\images\013069861.png
+[COPY_OUT] split=train src=graphs\images\013081973.png -> data\plots\train\negatives\013081973.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13081973 -> cache=graphs\images\013081973.png
+[COPY_OUT] split=train src=graphs\images\013108069.png -> data\plots\train\negatives\013108069.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13108069 -> cache=graphs\images\013108069.png
+[COPY_OUT] split=test src=graphs\images\013121084.png -> data\plots\test\negatives\013121084.png
+[GENERATE_SYNTHETIC] split=test target=KIC 13121084 -> cache=graphs\images\013121084.png
+[COPY_OUT] split=train src=graphs\images\013125313.png -> data\plots\train\negatives\013125313.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13125313 -> cache=graphs\images\013125313.png
+[COPY_OUT] split=train src=graphs\images\013176144.png -> data\plots\train\negatives\013176144.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13176144 -> cache=graphs\images\013176144.png
+[COPY_OUT] split=train src=graphs\images\013188592.png -> data\plots\train\negatives\013188592.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13188592 -> cache=graphs\images\013188592.png
+[COPY_OUT] split=train src=graphs\images\013309910.png -> data\plots\train\negatives\013309910.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13309910 -> cache=graphs\images\013309910.png
+[COPY_OUT] split=train src=graphs\images\013389236.png -> data\plots\train\negatives\013389236.png
+[GENERATE_SYNTHETIC] split=train target=KIC 13389236 -> cache=graphs\images\013389236.png
+[COPY_OUT] split=val src=graphs\images\013431741.png -> data\plots\val\negatives\013431741.png
+[GENERATE_SYNTHETIC] split=val target=KIC 13431741 -> cache=graphs\images\013431741.png
+[COPY_OUT] split=train src=graphs\images\001355785.png -> data\plots\train\negatives\001355785.png
+[GENERATE_SYNTHETIC] split=train target=KIC 1355785 -> cache=graphs\images\001355785.png
+[COPY_OUT] split=test src=graphs\images\001389380.png -> data\plots\test\negatives\001389380.png
+[GENERATE_SYNTHETIC] split=test target=KIC 1389380 -> cache=graphs\images\001389380.png
+[COPY_OUT] split=test src=graphs\images\001449583.png -> data\plots\test\negatives\001449583.png
+[GENERATE_SYNTHETIC] split=test target=KIC 1449583 -> cache=graphs\images\001449583.png
+[COPY_OUT] split=train src=graphs\images\001906579.png -> data\plots\train\negatives\001906579.png
+[GENERATE_SYNTHETIC] split=train target=KIC 1906579 -> cache=graphs\images\001906579.png
+[COPY_OUT] split=train src=graphs\images\002010192.png -> data\plots\train\negatives\002010192.png
+[GENERATE_SYNTHETIC] split=train target=KIC 2010192 -> cache=graphs\images\002010192.png
+[COPY_OUT] split=val src=graphs\images\002103308.png -> data\plots\val\negatives\002103308.png
+[GENERATE_SYNTHETIC] split=val target=KIC 2103308 -> cache=graphs\images\002103308.png
+[COPY_OUT] split=train src=graphs\images\002429420.png -> data\plots\train\negatives\002429420.png
+[GENERATE_SYNTHETIC] split=train target=KIC 2429420 -> cache=graphs\images\002429420.png
+[COPY_OUT] split=test src=graphs\images\002966549.png -> data\plots\test\negatives\002966549.png
+[GENERATE_SYNTHETIC] split=test target=KIC 2966549 -> cache=graphs\images\002966549.png
+[COPY_OUT] split=train src=graphs\images\003112889.png -> data\plots\train\negatives\003112889.png
+[COPY] split=train target=KIC 3112889 src=scripts\raw_images\KIC_3112889_Kepler_phase.png -> cache=graphs\images\003112889.png
+[COPY_OUT] split=train src=graphs\images\003230403.png -> data\plots\train\negatives\003230403.png
+[GENERATE_SYNTHETIC] split=train target=KIC 3230403 -> cache=graphs\images\003230403.png
+[COPY_OUT] split=train src=graphs\images\003236823.png -> data\plots\train\negatives\003236823.png
+[GENERATE_SYNTHETIC] split=train target=KIC 3236823 -> cache=graphs\images\003236823.png
+[COPY_OUT] split=train src=graphs\images\003248033.png -> data\plots\train\negatives\003248033.png
+[COPY] split=train target=KIC 3248033 src=scripts\raw_images\KIC_3248033_Kepler_phase.png -> cache=graphs\images\003248033.png
+[COPY_OUT] split=val src=graphs\images\003642741.png -> data\plots\val\negatives\003642741.png
+[COPY] split=val target=KIC 3642741 src=scripts\raw_images\KIC_3642741_Kepler_phase.png -> cache=graphs\images\003642741.png
+[COPY_OUT] split=train src=graphs\images\003889379.png -> data\plots\train\negatives\003889379.png
+[GENERATE_SYNTHETIC] split=train target=KIC 3889379 -> cache=graphs\images\003889379.png
+[COPY_OUT] split=train src=graphs\images\004660982.png -> data\plots\train\negatives\004660982.png
+[GENERATE_SYNTHETIC] split=train target=KIC 4660982 -> cache=graphs\images\004660982.png
+[COPY_OUT] split=test src=graphs\images\004733202.png -> data\plots\test\negatives\004733202.png
+[GENERATE_SYNTHETIC] split=test target=KIC 4733202 -> cache=graphs\images\004733202.png
+[COPY_OUT] split=test src=graphs\images\004914423.png -> data\plots\test\negatives\004914423.png
+[COPY] split=test target=KIC 4914423 src=scripts\raw_images\KIC_4914423_Kepler_phase.png -> cache=graphs\images\004914423.png
+[COPY_OUT] split=train src=graphs\images\005186205.png -> data\plots\train\negatives\005186205.png
+[GENERATE_SYNTHETIC] split=train target=KIC 5186205 -> cache=graphs\images\005186205.png
+[COPY_OUT] split=train src=graphs\images\005461538.png -> data\plots\train\negatives\005461538.png
+[GENERATE_SYNTHETIC] split=train target=KIC 5461538 -> cache=graphs\images\005461538.png
+[COPY_OUT] split=train src=graphs\images\005562010.png -> data\plots\train\negatives\005562010.png
+[GENERATE_SYNTHETIC] split=train target=KIC 5562010 -> cache=graphs\images\005562010.png
+[COPY_OUT] split=test src=graphs\images\006032730.png -> data\plots\test\negatives\006032730.png
+[COPY] split=test target=KIC 6032730 src=scripts\raw_images\KIC_6032730_Kepler_phase.png -> cache=graphs\images\006032730.png
+[COPY_OUT] split=train src=graphs\images\006063299.png -> data\plots\train\negatives\006063299.png
+[GENERATE_SYNTHETIC] split=train target=KIC 6063299 -> cache=graphs\images\006063299.png
+[COPY_OUT] split=train src=graphs\images\006305407.png -> data\plots\train\negatives\006305407.png
+[GENERATE_SYNTHETIC] split=train target=KIC 6305407 -> cache=graphs\images\006305407.png
+[COPY_OUT] split=train src=graphs\images\006426556.png -> data\plots\train\negatives\006426556.png
+[GENERATE_SYNTHETIC] split=train target=KIC 6426556 -> cache=graphs\images\006426556.png
+[COPY_OUT] split=val src=graphs\images\006577959.png -> data\plots\val\negatives\006577959.png
+[GENERATE_SYNTHETIC] split=val target=KIC 6577959 -> cache=graphs\images\006577959.png
+[COPY_OUT] split=train src=graphs\images\006943175.png -> data\plots\train\negatives\006943175.png
+[GENERATE_SYNTHETIC] split=train target=KIC 6943175 -> cache=graphs\images\006943175.png
+[COPY_OUT] split=train src=graphs\images\007260837.png -> data\plots\train\negatives\007260837.png
+[GENERATE_SYNTHETIC] split=train target=KIC 7260837 -> cache=graphs\images\007260837.png
+[COPY_OUT] split=val src=graphs\images\000757450.png -> data\plots\val\negatives\000757450.png
+[COPY] split=val target=KIC 757450 src=scripts\raw_images\KIC_757450_Kepler_phase.png -> cache=graphs\images\000757450.png
+[COPY_OUT] split=test src=graphs\images\007944696.png -> data\plots\test\negatives\007944696.png
+[GENERATE_SYNTHETIC] split=test target=KIC 7944696 -> cache=graphs\images\007944696.png
+[COPY_OUT] split=val src=graphs\images\008080133.png -> data\plots\val\negatives\008080133.png
+[GENERATE_SYNTHETIC] split=val target=KIC 8080133 -> cache=graphs\images\008080133.png
+[COPY_OUT] split=train src=graphs\images\008191672.png -> data\plots\train\negatives\008191672.png
+[COPY] split=train target=KIC 8191672 src=scripts\raw_images\KIC_8191672_Kepler_phase.png -> cache=graphs\images\008191672.png
+[COPY_OUT] split=val src=graphs\images\008261920.png -> data\plots\val\negatives\008261920.png
+[COPY] split=val target=KIC 8261920 src=scripts\raw_images\KIC_8261920_Kepler_phase.png -> cache=graphs\images\008261920.png
+[COPY_OUT] split=train src=graphs\images\008281923.png -> data\plots\train\negatives\008281923.png
+[GENERATE_SYNTHETIC] split=train target=KIC 8281923 -> cache=graphs\images\008281923.png
+[COPY_OUT] split=val src=graphs\images\008506955.png -> data\plots\val\negatives\008506955.png
+[COPY] split=val target=KIC 8506955 src=scripts\raw_images\KIC_8506955_Kepler_phase.png -> cache=graphs\images\008506955.png
+[COPY_OUT] split=train src=graphs\images\008796200.png -> data\plots\train\negatives\008796200.png
+[GENERATE_SYNTHETIC] split=train target=KIC 8796200 -> cache=graphs\images\008796200.png
+[COPY_OUT] split=train src=graphs\images\008961775.png -> data\plots\train\negatives\008961775.png
+[GENERATE_SYNTHETIC] split=train target=KIC 8961775 -> cache=graphs\images\008961775.png
+[COPY_OUT] split=train src=graphs\images\009023880.png -> data\plots\train\negatives\009023880.png
+[GENERATE_SYNTHETIC] split=train target=KIC 9023880 -> cache=graphs\images\009023880.png
+[COPY_OUT] split=train src=graphs\images\009291525.png -> data\plots\train\negatives\009291525.png
+[GENERATE_SYNTHETIC] split=train target=KIC 9291525 -> cache=graphs\images\009291525.png
+[COPY_OUT] split=val src=graphs\images\009477107.png -> data\plots\val\negatives\009477107.png
+[GENERATE_SYNTHETIC] split=val target=KIC 9477107 -> cache=graphs\images\009477107.png
+[COPY_OUT] split=train src=graphs\images\009718847.png -> data\plots\train\negatives\009718847.png
+[GENERATE_SYNTHETIC] split=train target=KIC 9718847 -> cache=graphs\images\009718847.png
+[COPY_OUT] split=train src=graphs\images\009845515.png -> data\plots\train\negatives\009845515.png
+[GENERATE_SYNTHETIC] split=train target=KIC 9845515 -> cache=graphs\images\009845515.png
+[COPY_OUT] split=test src=graphs\images\009883538.png -> data\plots\test\negatives\009883538.png
+[GENERATE_SYNTHETIC] split=test target=KIC 9883538 -> cache=graphs\images\009883538.png
+[COPY_OUT] split=train src=graphs\images\009892211.png -> data\plots\train\negatives\009892211.png
+[GENERATE_SYNTHETIC] split=train target=KIC 9892211 -> cache=graphs\images\009892211.png
+[COPY_OUT] split=train src=graphs\images\009955598.png -> data\plots\train\negatives\009955598.png
+[COPY] split=train target=KIC 9955598 src=scripts\raw_images\KIC_9955598_Kepler_phase.png -> cache=graphs\images\009955598.png
+[COPY_OUT] split=test src=graphs\images\101620058.png -> data\plots\test\negatives\101620058.png
+[GENERATE_SYNTHETIC] split=test target=TIC 101620058 -> cache=graphs\images\101620058.png
+[COPY_OUT] split=train src=graphs\images\103212030.png -> data\plots\train\negatives\103212030.png
+[GENERATE_SYNTHETIC] split=train target=TIC 103212030 -> cache=graphs\images\103212030.png
+[COPY_OUT] split=train src=graphs\images\108992938.png -> data\plots\train\negatives\108992938.png
+[GENERATE_SYNTHETIC] split=train target=TIC 108992938 -> cache=graphs\images\108992938.png
+[COPY_OUT] split=train src=graphs\images\114002887.png -> data\plots\train\negatives\114002887.png
+[GENERATE_SYNTHETIC] split=train target=TIC 114002887 -> cache=graphs\images\114002887.png
+[COPY_OUT] split=test src=graphs\images\118163443.png -> data\plots\test\negatives\118163443.png
+[GENERATE_SYNTHETIC] split=test target=TIC 118163443 -> cache=graphs\images\118163443.png
+[COPY_OUT] split=train src=graphs\images\121669036.png -> data\plots\train\negatives\121669036.png
+[GENERATE_SYNTHETIC] split=train target=TIC 121669036 -> cache=graphs\images\121669036.png
+[COPY_OUT] split=test src=graphs\images\123720099.png -> data\plots\test\negatives\123720099.png
+[GENERATE_SYNTHETIC] split=test target=TIC 123720099 -> cache=graphs\images\123720099.png
+[COPY_OUT] split=train src=graphs\images\123938643.png -> data\plots\train\negatives\123938643.png
+[GENERATE_SYNTHETIC] split=train target=TIC 123938643 -> cache=graphs\images\123938643.png
+[COPY_OUT] split=train src=graphs\images\124380630.png -> data\plots\train\negatives\124380630.png
+[GENERATE_SYNTHETIC] split=train target=TIC 124380630 -> cache=graphs\images\124380630.png
+[COPY_OUT] split=train src=graphs\images\126118043.png -> data\plots\train\negatives\126118043.png
+[GENERATE_SYNTHETIC] split=train target=TIC 126118043 -> cache=graphs\images\126118043.png
+[COPY_OUT] split=val src=graphs\images\126540081.png -> data\plots\val\negatives\126540081.png
+[GENERATE_SYNTHETIC] split=val target=TIC 126540081 -> cache=graphs\images\126540081.png
+[COPY_OUT] split=test src=graphs\images\128450332.png -> data\plots\test\negatives\128450332.png
+[GENERATE_SYNTHETIC] split=test target=TIC 128450332 -> cache=graphs\images\128450332.png
+[COPY_OUT] split=train src=graphs\images\129104303.png -> data\plots\train\negatives\129104303.png
+[GENERATE_SYNTHETIC] split=train target=TIC 129104303 -> cache=graphs\images\129104303.png
+[COPY_OUT] split=train src=graphs\images\130998441.png -> data\plots\train\negatives\130998441.png
+[GENERATE_SYNTHETIC] split=train target=TIC 130998441 -> cache=graphs\images\130998441.png
+[COPY_OUT] split=val src=graphs\images\131066167.png -> data\plots\val\negatives\131066167.png
+[GENERATE_SYNTHETIC] split=val target=TIC 131066167 -> cache=graphs\images\131066167.png
+[COPY_OUT] split=train src=graphs\images\133001777.png -> data\plots\train\negatives\133001777.png
+[GENERATE_SYNTHETIC] split=train target=TIC 133001777 -> cache=graphs\images\133001777.png
+[COPY_OUT] split=train src=graphs\images\133998164.png -> data\plots\train\negatives\133998164.png
+[GENERATE_SYNTHETIC] split=train target=TIC 133998164 -> cache=graphs\images\133998164.png
+[COPY_OUT] split=train src=graphs\images\134820361.png -> data\plots\train\negatives\134820361.png
+[GENERATE_SYNTHETIC] split=train target=TIC 134820361 -> cache=graphs\images\134820361.png
+[COPY_OUT] split=train src=graphs\images\138170112.png -> data\plots\train\negatives\138170112.png
+[GENERATE_SYNTHETIC] split=train target=TIC 138170112 -> cache=graphs\images\138170112.png
+[COPY_OUT] split=train src=graphs\images\138247388.png -> data\plots\train\negatives\138247388.png
+[GENERATE_SYNTHETIC] split=train target=TIC 138247388 -> cache=graphs\images\138247388.png
+[COPY_OUT] split=train src=graphs\images\139257253.png -> data\plots\train\negatives\139257253.png
+[GENERATE_SYNTHETIC] split=train target=TIC 139257253 -> cache=graphs\images\139257253.png
+[COPY_OUT] split=train src=graphs\images\140001399.png -> data\plots\train\negatives\140001399.png
+[GENERATE_SYNTHETIC] split=train target=TIC 140001399 -> cache=graphs\images\140001399.png
+[COPY_OUT] split=train src=graphs\images\001403938.png -> data\plots\train\negatives\001403938.png
+[GENERATE_SYNTHETIC] split=train target=TIC 1403938 -> cache=graphs\images\001403938.png
+[COPY_OUT] split=val src=graphs\images\140972730.png -> data\plots\val\negatives\140972730.png
+[GENERATE_SYNTHETIC] split=val target=TIC 140972730 -> cache=graphs\images\140972730.png
+[COPY_OUT] split=train src=graphs\images\014180958.png -> data\plots\train\negatives\014180958.png
+[GENERATE_SYNTHETIC] split=train target=TIC 14180958 -> cache=graphs\images\014180958.png
+[COPY_OUT] split=train src=graphs\images\141950978.png -> data\plots\train\negatives\141950978.png
+[GENERATE_SYNTHETIC] split=train target=TIC 141950978 -> cache=graphs\images\141950978.png
+[COPY_OUT] split=train src=graphs\images\145936916.png -> data\plots\train\negatives\145936916.png
+[GENERATE_SYNTHETIC] split=train target=TIC 145936916 -> cache=graphs\images\145936916.png
+[COPY_OUT] split=val src=graphs\images\147704167.png -> data\plots\val\negatives\147704167.png
+[GENERATE_SYNTHETIC] split=val target=TIC 147704167 -> cache=graphs\images\147704167.png
+[COPY_OUT] split=train src=graphs\images\147772384.png -> data\plots\train\negatives\147772384.png
+[GENERATE_SYNTHETIC] split=train target=TIC 147772384 -> cache=graphs\images\147772384.png
+[COPY_OUT] split=train src=graphs\images\149022417.png -> data\plots\train\negatives\149022417.png
+[GENERATE_SYNTHETIC] split=train target=TIC 149022417 -> cache=graphs\images\149022417.png
+[COPY_OUT] split=test src=graphs\images\154014008.png -> data\plots\test\negatives\154014008.png
+[GENERATE_SYNTHETIC] split=test target=TIC 154014008 -> cache=graphs\images\154014008.png
+[COPY_OUT] split=train src=graphs\images\156365567.png -> data\plots\train\negatives\156365567.png
+[GENERATE_SYNTHETIC] split=train target=TIC 156365567 -> cache=graphs\images\156365567.png
+[COPY_OUT] split=train src=graphs\images\160780338.png -> data\plots\train\negatives\160780338.png
+[GENERATE_SYNTHETIC] split=train target=TIC 160780338 -> cache=graphs\images\160780338.png
+[COPY_OUT] split=train src=graphs\images\164564181.png -> data\plots\train\negatives\164564181.png
+[GENERATE_SYNTHETIC] split=train target=TIC 164564181 -> cache=graphs\images\164564181.png
+[COPY_OUT] split=train src=graphs\images\164893020.png -> data\plots\train\negatives\164893020.png
+[GENERATE_SYNTHETIC] split=train target=TIC 164893020 -> cache=graphs\images\164893020.png
+[COPY_OUT] split=train src=graphs\images\165031986.png -> data\plots\train\negatives\165031986.png
+[GENERATE_SYNTHETIC] split=train target=TIC 165031986 -> cache=graphs\images\165031986.png
+[COPY_OUT] split=train src=graphs\images\165142694.png -> data\plots\train\negatives\165142694.png
+[GENERATE_SYNTHETIC] split=train target=TIC 165142694 -> cache=graphs\images\165142694.png
+[COPY_OUT] split=train src=graphs\images\165287885.png -> data\plots\train\negatives\165287885.png
+[GENERATE_SYNTHETIC] split=train target=TIC 165287885 -> cache=graphs\images\165287885.png
+[COPY_OUT] split=test src=graphs\images\166838821.png -> data\plots\test\negatives\166838821.png
+[GENERATE_SYNTHETIC] split=test target=TIC 166838821 -> cache=graphs\images\166838821.png
+[COPY_OUT] split=train src=graphs\images\167692429.png -> data\plots\train\negatives\167692429.png
+[GENERATE_SYNTHETIC] split=train target=TIC 167692429 -> cache=graphs\images\167692429.png
+[COPY_OUT] split=test src=graphs\images\168454083.png -> data\plots\test\negatives\168454083.png
+[GENERATE_SYNTHETIC] split=test target=TIC 168454083 -> cache=graphs\images\168454083.png
+[COPY_OUT] split=train src=graphs\images\168889291.png -> data\plots\train\negatives\168889291.png
+[GENERATE_SYNTHETIC] split=train target=TIC 168889291 -> cache=graphs\images\168889291.png
+[COPY_OUT] split=val src=graphs\images\169797454.png -> data\plots\val\negatives\169797454.png
+[GENERATE_SYNTHETIC] split=val target=TIC 169797454 -> cache=graphs\images\169797454.png
+[COPY_OUT] split=test src=graphs\images\170223119.png -> data\plots\test\negatives\170223119.png
+[GENERATE_SYNTHETIC] split=test target=TIC 170223119 -> cache=graphs\images\170223119.png
+[COPY_OUT] split=train src=graphs\images\171065774.png -> data\plots\train\negatives\171065774.png
+[GENERATE_SYNTHETIC] split=train target=TIC 171065774 -> cache=graphs\images\171065774.png
+[COPY_OUT] split=train src=graphs\images\171441992.png -> data\plots\train\negatives\171441992.png
+[GENERATE_SYNTHETIC] split=train target=TIC 171441992 -> cache=graphs\images\171441992.png
+[COPY_OUT] split=train src=graphs\images\172370679.png -> data\plots\train\negatives\172370679.png
+[GENERATE_SYNTHETIC] split=train target=TIC 172370679 -> cache=graphs\images\172370679.png
+[COPY_OUT] split=val src=graphs\images\173888622.png -> data\plots\val\negatives\173888622.png
+[GENERATE_SYNTHETIC] split=val target=TIC 173888622 -> cache=graphs\images\173888622.png
+[COPY_OUT] split=train src=graphs\images\173893441.png -> data\plots\train\negatives\173893441.png
+[GENERATE_SYNTHETIC] split=train target=TIC 173893441 -> cache=graphs\images\173893441.png
+[COPY_OUT] split=train src=graphs\images\174232285.png -> data\plots\train\negatives\174232285.png
+[GENERATE_SYNTHETIC] split=train target=TIC 174232285 -> cache=graphs\images\174232285.png
+[COPY_OUT] split=train src=graphs\images\174314106.png -> data\plots\train\negatives\174314106.png
+[GENERATE_SYNTHETIC] split=train target=TIC 174314106 -> cache=graphs\images\174314106.png
+[COPY_OUT] split=train src=graphs\images\176771441.png -> data\plots\train\negatives\176771441.png
+[GENERATE_SYNTHETIC] split=train target=TIC 176771441 -> cache=graphs\images\176771441.png
+[COPY_OUT] split=train src=graphs\images\176948787.png -> data\plots\train\negatives\176948787.png
+[GENERATE_SYNTHETIC] split=train target=TIC 176948787 -> cache=graphs\images\176948787.png
+[COPY_OUT] split=train src=graphs\images\177668319.png -> data\plots\train\negatives\177668319.png
+[GENERATE_SYNTHETIC] split=train target=TIC 177668319 -> cache=graphs\images\177668319.png
+[COPY_OUT] split=test src=graphs\images\178005382.png -> data\plots\test\negatives\178005382.png
+[GENERATE_SYNTHETIC] split=test target=TIC 178005382 -> cache=graphs\images\178005382.png
+[COPY_OUT] split=train src=graphs\images\178948423.png -> data\plots\train\negatives\178948423.png
+[GENERATE_SYNTHETIC] split=train target=TIC 178948423 -> cache=graphs\images\178948423.png
+[COPY_OUT] split=test src=graphs\images\180209938.png -> data\plots\test\negatives\180209938.png
+[GENERATE_SYNTHETIC] split=test target=TIC 180209938 -> cache=graphs\images\180209938.png
+[COPY_OUT] split=train src=graphs\images\180771992.png -> data\plots\train\negatives\180771992.png
+[GENERATE_SYNTHETIC] split=train target=TIC 180771992 -> cache=graphs\images\180771992.png
+[COPY_OUT] split=train src=graphs\images\184200019.png -> data\plots\train\negatives\184200019.png
+[GENERATE_SYNTHETIC] split=train target=TIC 184200019 -> cache=graphs\images\184200019.png
+[COPY_OUT] split=test src=graphs\images\186170238.png -> data\plots\test\negatives\186170238.png
+[GENERATE_SYNTHETIC] split=test target=TIC 186170238 -> cache=graphs\images\186170238.png
+[COPY_OUT] split=train src=graphs\images\186889030.png -> data\plots\train\negatives\186889030.png
+[GENERATE_SYNTHETIC] split=train target=TIC 186889030 -> cache=graphs\images\186889030.png
+[COPY_OUT] split=train src=graphs\images\190459270.png -> data\plots\train\negatives\190459270.png
+[GENERATE_SYNTHETIC] split=train target=TIC 190459270 -> cache=graphs\images\190459270.png
+[COPY_OUT] split=train src=graphs\images\190924957.png -> data\plots\train\negatives\190924957.png
+[GENERATE_SYNTHETIC] split=train target=TIC 190924957 -> cache=graphs\images\190924957.png
+[COPY_OUT] split=train src=graphs\images\191004455.png -> data\plots\train\negatives\191004455.png
+[GENERATE_SYNTHETIC] split=train target=TIC 191004455 -> cache=graphs\images\191004455.png
+[COPY_OUT] split=train src=graphs\images\191220228.png -> data\plots\train\negatives\191220228.png
+[GENERATE_SYNTHETIC] split=train target=TIC 191220228 -> cache=graphs\images\191220228.png
+[COPY_OUT] split=train src=graphs\images\194550238.png -> data\plots\train\negatives\194550238.png
+[GENERATE_SYNTHETIC] split=train target=TIC 194550238 -> cache=graphs\images\194550238.png
+[COPY_OUT] split=train src=graphs\images\194992687.png -> data\plots\train\negatives\194992687.png
+[GENERATE_SYNTHETIC] split=train target=TIC 194992687 -> cache=graphs\images\194992687.png
+[COPY_OUT] split=train src=graphs\images\200771993.png -> data\plots\train\negatives\200771993.png
+[GENERATE_SYNTHETIC] split=train target=TIC 200771993 -> cache=graphs\images\200771993.png
+[COPY_OUT] split=test src=graphs\images\200997262.png -> data\plots\test\negatives\200997262.png
+[GENERATE_SYNTHETIC] split=test target=TIC 200997262 -> cache=graphs\images\200997262.png
+[COPY_OUT] split=train src=graphs\images\203982928.png -> data\plots\train\negatives\203982928.png
+[GENERATE_SYNTHETIC] split=train target=TIC 203982928 -> cache=graphs\images\203982928.png
+[COPY_OUT] split=test src=graphs\images\205146163.png -> data\plots\test\negatives\205146163.png
+[GENERATE_SYNTHETIC] split=test target=TIC 205146163 -> cache=graphs\images\205146163.png
+[COPY_OUT] split=train src=graphs\images\206064116.png -> data\plots\train\negatives\206064116.png
+[GENERATE_SYNTHETIC] split=train target=TIC 206064116 -> cache=graphs\images\206064116.png
+[COPY_OUT] split=test src=graphs\images\212012457.png -> data\plots\test\negatives\212012457.png
+[GENERATE_SYNTHETIC] split=test target=TIC 212012457 -> cache=graphs\images\212012457.png
+[COPY_OUT] split=train src=graphs\images\212780560.png -> data\plots\train\negatives\212780560.png
+[GENERATE_SYNTHETIC] split=train target=TIC 212780560 -> cache=graphs\images\212780560.png
+[COPY_OUT] split=train src=graphs\images\212949556.png -> data\plots\train\negatives\212949556.png
+[GENERATE_SYNTHETIC] split=train target=TIC 212949556 -> cache=graphs\images\212949556.png
+[COPY_OUT] split=train src=graphs\images\213094842.png -> data\plots\train\negatives\213094842.png
+[GENERATE_SYNTHETIC] split=train target=TIC 213094842 -> cache=graphs\images\213094842.png
+[COPY_OUT] split=test src=graphs\images\214025219.png -> data\plots\test\negatives\214025219.png
+[GENERATE_SYNTHETIC] split=test target=TIC 214025219 -> cache=graphs\images\214025219.png
+[COPY_OUT] split=train src=graphs\images\214771004.png -> data\plots\train\negatives\214771004.png
+[GENERATE_SYNTHETIC] split=train target=TIC 214771004 -> cache=graphs\images\214771004.png
+[COPY_OUT] split=train src=graphs\images\214998094.png -> data\plots\train\negatives\214998094.png
+[GENERATE_SYNTHETIC] split=train target=TIC 214998094 -> cache=graphs\images\214998094.png
+[COPY_OUT] split=val src=graphs\images\215732919.png -> data\plots\val\negatives\215732919.png
+[GENERATE_SYNTHETIC] split=val target=TIC 215732919 -> cache=graphs\images\215732919.png
+[COPY_OUT] split=train src=graphs\images\217070020.png -> data\plots\train\negatives\217070020.png
+[GENERATE_SYNTHETIC] split=train target=TIC 217070020 -> cache=graphs\images\217070020.png
+[COPY_OUT] split=test src=graphs\images\217495237.png -> data\plots\test\negatives\217495237.png
+[GENERATE_SYNTHETIC] split=test target=TIC 217495237 -> cache=graphs\images\217495237.png
+[COPY_OUT] split=train src=graphs\images\218593799.png -> data\plots\train\negatives\218593799.png
+[GENERATE_SYNTHETIC] split=train target=TIC 218593799 -> cache=graphs\images\218593799.png
+[COPY_OUT] split=train src=graphs\images\219771660.png -> data\plots\train\negatives\219771660.png
+[GENERATE_SYNTHETIC] split=train target=TIC 219771660 -> cache=graphs\images\219771660.png
+[COPY_OUT] split=train src=graphs\images\219998007.png -> data\plots\train\negatives\219998007.png
+[GENERATE_SYNTHETIC] split=train target=TIC 219998007 -> cache=graphs\images\219998007.png
+[COPY_OUT] split=train src=graphs\images\222992908.png -> data\plots\train\negatives\222992908.png
+[GENERATE_SYNTHETIC] split=train target=TIC 222992908 -> cache=graphs\images\222992908.png
+[COPY_OUT] split=train src=graphs\images\223562317.png -> data\plots\train\negatives\223562317.png
+[GENERATE_SYNTHETIC] split=train target=TIC 223562317 -> cache=graphs\images\223562317.png
+[COPY_OUT] split=test src=graphs\images\223790602.png -> data\plots\test\negatives\223790602.png
+[GENERATE_SYNTHETIC] split=test target=TIC 223790602 -> cache=graphs\images\223790602.png
+[COPY_OUT] split=train src=graphs\images\224225541.png -> data\plots\train\negatives\224225541.png
+[GENERATE_SYNTHETIC] split=train target=TIC 224225541 -> cache=graphs\images\224225541.png
+[COPY_OUT] split=val src=graphs\images\224271168.png -> data\plots\val\negatives\224271168.png
+[GENERATE_SYNTHETIC] split=val target=TIC 224271168 -> cache=graphs\images\224271168.png
+[COPY_OUT] split=val src=graphs\images\224787156.png -> data\plots\val\negatives\224787156.png
+[GENERATE_SYNTHETIC] split=val target=TIC 224787156 -> cache=graphs\images\224787156.png
+[COPY_OUT] split=val src=graphs\images\227850077.png -> data\plots\val\negatives\227850077.png
+[GENERATE_SYNTHETIC] split=val target=TIC 227850077 -> cache=graphs\images\227850077.png
+[COPY_OUT] split=val src=graphs\images\227994118.png -> data\plots\val\negatives\227994118.png
+[GENERATE_SYNTHETIC] split=val target=TIC 227994118 -> cache=graphs\images\227994118.png
+[COPY_OUT] split=val src=graphs\images\228483182.png -> data\plots\val\negatives\228483182.png
+[GENERATE_SYNTHETIC] split=val target=TIC 228483182 -> cache=graphs\images\228483182.png
+[COPY_OUT] split=test src=graphs\images\229202580.png -> data\plots\test\negatives\229202580.png
+[GENERATE_SYNTHETIC] split=test target=TIC 229202580 -> cache=graphs\images\229202580.png
+[COPY_OUT] split=train src=graphs\images\229410771.png -> data\plots\train\negatives\229410771.png
+[GENERATE_SYNTHETIC] split=train target=TIC 229410771 -> cache=graphs\images\229410771.png
+[COPY_OUT] split=train src=graphs\images\229700337.png -> data\plots\train\negatives\229700337.png
+[GENERATE_SYNTHETIC] split=train target=TIC 229700337 -> cache=graphs\images\229700337.png
+[COPY_OUT] split=train src=graphs\images\229909282.png -> data\plots\train\negatives\229909282.png
+[GENERATE_SYNTHETIC] split=train target=TIC 229909282 -> cache=graphs\images\229909282.png
+[COPY_OUT] split=val src=graphs\images\229989531.png -> data\plots\val\negatives\229989531.png
+[GENERATE_SYNTHETIC] split=val target=TIC 229989531 -> cache=graphs\images\229989531.png
+[COPY_OUT] split=train src=graphs\images\233118099.png -> data\plots\train\negatives\233118099.png
+[GENERATE_SYNTHETIC] split=train target=TIC 233118099 -> cache=graphs\images\233118099.png
+[COPY_OUT] split=train src=graphs\images\235140143.png -> data\plots\train\negatives\235140143.png
+[GENERATE_SYNTHETIC] split=train target=TIC 235140143 -> cache=graphs\images\235140143.png
+[COPY_OUT] split=train src=graphs\images\236411008.png -> data\plots\train\negatives\236411008.png
+[GENERATE_SYNTHETIC] split=train target=TIC 236411008 -> cache=graphs\images\236411008.png
+[COPY_OUT] split=train src=graphs\images\236821006.png -> data\plots\train\negatives\236821006.png
+[GENERATE_SYNTHETIC] split=train target=TIC 236821006 -> cache=graphs\images\236821006.png
+[COPY_OUT] split=test src=graphs\images\237151888.png -> data\plots\test\negatives\237151888.png
+[GENERATE_SYNTHETIC] split=test target=TIC 237151888 -> cache=graphs\images\237151888.png
+[COPY_OUT] split=train src=graphs\images\238038834.png -> data\plots\train\negatives\238038834.png
+[GENERATE_SYNTHETIC] split=train target=TIC 238038834 -> cache=graphs\images\238038834.png
+[COPY_OUT] split=train src=graphs\images\238608698.png -> data\plots\train\negatives\238608698.png
+[GENERATE_SYNTHETIC] split=train target=TIC 238608698 -> cache=graphs\images\238608698.png
+[COPY_OUT] split=train src=graphs\images\241002119.png -> data\plots\train\negatives\241002119.png
+[GENERATE_SYNTHETIC] split=train target=TIC 241002119 -> cache=graphs\images\241002119.png
+[COPY_OUT] split=val src=graphs\images\242229843.png -> data\plots\val\negatives\242229843.png
+[GENERATE_SYNTHETIC] split=val target=TIC 242229843 -> cache=graphs\images\242229843.png
+[COPY_OUT] split=train src=graphs\images\243662919.png -> data\plots\train\negatives\243662919.png
+[GENERATE_SYNTHETIC] split=train target=TIC 243662919 -> cache=graphs\images\243662919.png
+[COPY_OUT] split=train src=graphs\images\244209530.png -> data\plots\train\negatives\244209530.png
+[GENERATE_SYNTHETIC] split=train target=TIC 244209530 -> cache=graphs\images\244209530.png
+[COPY_OUT] split=train src=graphs\images\244919222.png -> data\plots\train\negatives\244919222.png
+[GENERATE_SYNTHETIC] split=train target=TIC 244919222 -> cache=graphs\images\244919222.png
+[COPY_OUT] split=train src=graphs\images\245403238.png -> data\plots\train\negatives\245403238.png
+[GENERATE_SYNTHETIC] split=train target=TIC 245403238 -> cache=graphs\images\245403238.png
+[COPY_OUT] split=train src=graphs\images\245579977.png -> data\plots\train\negatives\245579977.png
+[GENERATE_SYNTHETIC] split=train target=TIC 245579977 -> cache=graphs\images\245579977.png
+[COPY_OUT] split=train src=graphs\images\245661918.png -> data\plots\train\negatives\245661918.png
+[GENERATE_SYNTHETIC] split=train target=TIC 245661918 -> cache=graphs\images\245661918.png
+[COPY_OUT] split=train src=graphs\images\247304653.png -> data\plots\train\negatives\247304653.png
+[GENERATE_SYNTHETIC] split=train target=TIC 247304653 -> cache=graphs\images\247304653.png
+[COPY_OUT] split=train src=graphs\images\247502559.png -> data\plots\train\negatives\247502559.png
+[GENERATE_SYNTHETIC] split=train target=TIC 247502559 -> cache=graphs\images\247502559.png
+[COPY_OUT] split=val src=graphs\images\248990315.png -> data\plots\val\negatives\248990315.png
+[GENERATE_SYNTHETIC] split=val target=TIC 248990315 -> cache=graphs\images\248990315.png
+[COPY_OUT] split=train src=graphs\images\249889648.png -> data\plots\train\negatives\249889648.png
+[GENERATE_SYNTHETIC] split=train target=TIC 249889648 -> cache=graphs\images\249889648.png
+[COPY_OUT] split=train src=graphs\images\250311346.png -> data\plots\train\negatives\250311346.png
+[GENERATE_SYNTHETIC] split=train target=TIC 250311346 -> cache=graphs\images\250311346.png
+[COPY_OUT] split=train src=graphs\images\251355636.png -> data\plots\train\negatives\251355636.png
+[GENERATE_SYNTHETIC] split=train target=TIC 251355636 -> cache=graphs\images\251355636.png
+[COPY_OUT] split=val src=graphs\images\252996510.png -> data\plots\val\negatives\252996510.png
+[GENERATE_SYNTHETIC] split=val target=TIC 252996510 -> cache=graphs\images\252996510.png
+[COPY_OUT] split=train src=graphs\images\254771662.png -> data\plots\train\negatives\254771662.png
+[GENERATE_SYNTHETIC] split=train target=TIC 254771662 -> cache=graphs\images\254771662.png
+[COPY_OUT] split=test src=graphs\images\256565474.png -> data\plots\test\negatives\256565474.png
+[GENERATE_SYNTHETIC] split=test target=TIC 256565474 -> cache=graphs\images\256565474.png
+[COPY_OUT] split=val src=graphs\images\258990771.png -> data\plots\val\negatives\258990771.png
+[GENERATE_SYNTHETIC] split=val target=TIC 258990771 -> cache=graphs\images\258990771.png
+[COPY_OUT] split=train src=graphs\images\259377017.png -> data\plots\train\negatives\259377017.png
+[GENERATE_SYNTHETIC] split=train target=TIC 259377017 -> cache=graphs\images\259377017.png
+[COPY_OUT] split=train src=graphs\images\261008496.png -> data\plots\train\negatives\261008496.png
+[GENERATE_SYNTHETIC] split=train target=TIC 261008496 -> cache=graphs\images\261008496.png
+[COPY_OUT] split=test src=graphs\images\261831383.png -> data\plots\test\negatives\261831383.png
+[GENERATE_SYNTHETIC] split=test target=TIC 261831383 -> cache=graphs\images\261831383.png
+[COPY_OUT] split=val src=graphs\images\265244128.png -> data\plots\val\negatives\265244128.png
+[GENERATE_SYNTHETIC] split=val target=TIC 265244128 -> cache=graphs\images\265244128.png
+[COPY_OUT] split=test src=graphs\images\266773588.png -> data\plots\test\negatives\266773588.png
+[GENERATE_SYNTHETIC] split=test target=TIC 266773588 -> cache=graphs\images\266773588.png
+[COPY_OUT] split=test src=graphs\images\267541002.png -> data\plots\test\negatives\267541002.png
+[GENERATE_SYNTHETIC] split=test target=TIC 267541002 -> cache=graphs\images\267541002.png
+[COPY_OUT] split=train src=graphs\images\269298250.png -> data\plots\train\negatives\269298250.png
+[GENERATE_SYNTHETIC] split=train target=TIC 269298250 -> cache=graphs\images\269298250.png
+[COPY_OUT] split=train src=graphs\images\269992930.png -> data\plots\train\negatives\269992930.png
+[GENERATE_SYNTHETIC] split=train target=TIC 269992930 -> cache=graphs\images\269992930.png
+[COPY_OUT] split=train src=graphs\images\270557186.png -> data\plots\train\negatives\270557186.png
+[GENERATE_SYNTHETIC] split=train target=TIC 270557186 -> cache=graphs\images\270557186.png
+[COPY_OUT] split=train src=graphs\images\270620106.png -> data\plots\train\negatives\270620106.png
+[GENERATE_SYNTHETIC] split=train target=TIC 270620106 -> cache=graphs\images\270620106.png
+[COPY_OUT] split=train src=graphs\images\271082803.png -> data\plots\train\negatives\271082803.png
+[GENERATE_SYNTHETIC] split=train target=TIC 271082803 -> cache=graphs\images\271082803.png
+[COPY_OUT] split=train src=graphs\images\272270179.png -> data\plots\train\negatives\272270179.png
+[GENERATE_SYNTHETIC] split=train target=TIC 272270179 -> cache=graphs\images\272270179.png
+[COPY_OUT] split=test src=graphs\images\274099887.png -> data\plots\test\negatives\274099887.png
+[GENERATE_SYNTHETIC] split=test target=TIC 274099887 -> cache=graphs\images\274099887.png
+[COPY_OUT] split=train src=graphs\images\274732187.png -> data\plots\train\negatives\274732187.png
+[GENERATE_SYNTHETIC] split=train target=TIC 274732187 -> cache=graphs\images\274732187.png
+[COPY_OUT] split=train src=graphs\images\276001883.png -> data\plots\train\negatives\276001883.png
+[GENERATE_SYNTHETIC] split=train target=TIC 276001883 -> cache=graphs\images\276001883.png
+[COPY_OUT] split=test src=graphs\images\276665230.png -> data\plots\test\negatives\276665230.png
+[GENERATE_SYNTHETIC] split=test target=TIC 276665230 -> cache=graphs\images\276665230.png
+[COPY_OUT] split=train src=graphs\images\278663019.png -> data\plots\train\negatives\278663019.png
+[GENERATE_SYNTHETIC] split=train target=TIC 278663019 -> cache=graphs\images\278663019.png
+[COPY_OUT] split=train src=graphs\images\278664532.png -> data\plots\train\negatives\278664532.png
+[GENERATE_SYNTHETIC] split=train target=TIC 278664532 -> cache=graphs\images\278664532.png
+[COPY_OUT] split=train src=graphs\images\279065237.png -> data\plots\train\negatives\279065237.png
+[GENERATE_SYNTHETIC] split=train target=TIC 279065237 -> cache=graphs\images\279065237.png
+[COPY_OUT] split=train src=graphs\images\279141215.png -> data\plots\train\negatives\279141215.png
+[GENERATE_SYNTHETIC] split=train target=TIC 279141215 -> cache=graphs\images\279141215.png
+[COPY_OUT] split=train src=graphs\images\280694108.png -> data\plots\train\negatives\280694108.png
+[GENERATE_SYNTHETIC] split=train target=TIC 280694108 -> cache=graphs\images\280694108.png
+[COPY_OUT] split=test src=graphs\images\284046984.png -> data\plots\test\negatives\284046984.png
+[GENERATE_SYNTHETIC] split=test target=TIC 284046984 -> cache=graphs\images\284046984.png
+[COPY_OUT] split=train src=graphs\images\284196066.png -> data\plots\train\negatives\284196066.png
+[GENERATE_SYNTHETIC] split=train target=TIC 284196066 -> cache=graphs\images\284196066.png
+[COPY_OUT] split=train src=graphs\images\284382312.png -> data\plots\train\negatives\284382312.png
+[GENERATE_SYNTHETIC] split=train target=TIC 284382312 -> cache=graphs\images\284382312.png
+[COPY_OUT] split=train src=graphs\images\286771099.png -> data\plots\train\negatives\286771099.png
+[GENERATE_SYNTHETIC] split=train target=TIC 286771099 -> cache=graphs\images\286771099.png
+[COPY_OUT] split=test src=graphs\images\289716930.png -> data\plots\test\negatives\289716930.png
+[GENERATE_SYNTHETIC] split=test target=TIC 289716930 -> cache=graphs\images\289716930.png
+[COPY_OUT] split=train src=graphs\images\290612345.png -> data\plots\train\negatives\290612345.png
+[GENERATE_SYNTHETIC] split=train target=TIC 290612345 -> cache=graphs\images\290612345.png
+[COPY_OUT] split=val src=graphs\images\291094837.png -> data\plots\val\negatives\291094837.png
+[GENERATE_SYNTHETIC] split=val target=TIC 291094837 -> cache=graphs\images\291094837.png
+[COPY_OUT] split=train src=graphs\images\291928653.png -> data\plots\train\negatives\291928653.png
+[GENERATE_SYNTHETIC] split=train target=TIC 291928653 -> cache=graphs\images\291928653.png
+[COPY_OUT] split=test src=graphs\images\292137401.png -> data\plots\test\negatives\292137401.png
+[GENERATE_SYNTHETIC] split=test target=TIC 292137401 -> cache=graphs\images\292137401.png
+[COPY_OUT] split=train src=graphs\images\295041712.png -> data\plots\train\negatives\295041712.png
+[GENERATE_SYNTHETIC] split=train target=TIC 295041712 -> cache=graphs\images\295041712.png
+[COPY_OUT] split=test src=graphs\images\296068419.png -> data\plots\test\negatives\296068419.png
+[GENERATE_SYNTHETIC] split=test target=TIC 296068419 -> cache=graphs\images\296068419.png
+[COPY_OUT] split=train src=graphs\images\296404905.png -> data\plots\train\negatives\296404905.png
+[GENERATE_SYNTHETIC] split=train target=TIC 296404905 -> cache=graphs\images\296404905.png
+[COPY_OUT] split=train src=graphs\images\296472469.png -> data\plots\train\negatives\296472469.png
+[GENERATE_SYNTHETIC] split=train target=TIC 296472469 -> cache=graphs\images\296472469.png
+[COPY_OUT] split=test src=graphs\images\298029338.png -> data\plots\test\negatives\298029338.png
+[GENERATE_SYNTHETIC] split=test target=TIC 298029338 -> cache=graphs\images\298029338.png
+[COPY_OUT] split=train src=graphs\images\300907789.png -> data\plots\train\negatives\300907789.png
+[GENERATE_SYNTHETIC] split=train target=TIC 300907789 -> cache=graphs\images\300907789.png
+[COPY_OUT] split=train src=graphs\images\302401070.png -> data\plots\train\negatives\302401070.png
+[GENERATE_SYNTHETIC] split=train target=TIC 302401070 -> cache=graphs\images\302401070.png
+[COPY_OUT] split=train src=graphs\images\303148770.png -> data\plots\train\negatives\303148770.png
+[GENERATE_SYNTHETIC] split=train target=TIC 303148770 -> cache=graphs\images\303148770.png
+[COPY_OUT] split=test src=graphs\images\304216320.png -> data\plots\test\negatives\304216320.png
+[GENERATE_SYNTHETIC] split=test target=TIC 304216320 -> cache=graphs\images\304216320.png
+[COPY_OUT] split=test src=graphs\images\306263608.png -> data\plots\test\negatives\306263608.png
+[GENERATE_SYNTHETIC] split=test target=TIC 306263608 -> cache=graphs\images\306263608.png
+[COPY_OUT] split=train src=graphs\images\306606501.png -> data\plots\train\negatives\306606501.png
+[GENERATE_SYNTHETIC] split=train target=TIC 306606501 -> cache=graphs\images\306606501.png
+[COPY_OUT] split=train src=graphs\images\307210830.png -> data\plots\train\negatives\307210830.png
+[GENERATE_SYNTHETIC] split=train target=TIC 307210830 -> cache=graphs\images\307210830.png
+[COPY_OUT] split=val src=graphs\images\308919274.png -> data\plots\val\negatives\308919274.png
+[GENERATE_SYNTHETIC] split=val target=TIC 308919274 -> cache=graphs\images\308919274.png
+[COPY_OUT] split=test src=graphs\images\309173796.png -> data\plots\test\negatives\309173796.png
+[GENERATE_SYNTHETIC] split=test target=TIC 309173796 -> cache=graphs\images\309173796.png
+[COPY_OUT] split=train src=graphs\images\311450029.png -> data\plots\train\negatives\311450029.png
+[GENERATE_SYNTHETIC] split=train target=TIC 311450029 -> cache=graphs\images\311450029.png
+[COPY_OUT] split=test src=graphs\images\313554201.png -> data\plots\test\negatives\313554201.png
+[GENERATE_SYNTHETIC] split=test target=TIC 313554201 -> cache=graphs\images\313554201.png
+[COPY_OUT] split=train src=graphs\images\315771115.png -> data\plots\train\negatives\315771115.png
+[GENERATE_SYNTHETIC] split=train target=TIC 315771115 -> cache=graphs\images\315771115.png
+[COPY_OUT] split=train src=graphs\images\317848802.png -> data\plots\train\negatives\317848802.png
+[GENERATE_SYNTHETIC] split=train target=TIC 317848802 -> cache=graphs\images\317848802.png
+[COPY_OUT] split=train src=graphs\images\322014499.png -> data\plots\train\negatives\322014499.png
+[GENERATE_SYNTHETIC] split=train target=TIC 322014499 -> cache=graphs\images\322014499.png
+[COPY_OUT] split=train src=graphs\images\322949014.png -> data\plots\train\negatives\322949014.png
+[GENERATE_SYNTHETIC] split=train target=TIC 322949014 -> cache=graphs\images\322949014.png
+[COPY_OUT] split=train src=graphs\images\032504576.png -> data\plots\train\negatives\032504576.png
+[GENERATE_SYNTHETIC] split=train target=TIC 32504576 -> cache=graphs\images\032504576.png
+[COPY_OUT] split=test src=graphs\images\325723508.png -> data\plots\test\negatives\325723508.png
+[GENERATE_SYNTHETIC] split=test target=TIC 325723508 -> cache=graphs\images\325723508.png
+[COPY_OUT] split=train src=graphs\images\327700118.png -> data\plots\train\negatives\327700118.png
+[GENERATE_SYNTHETIC] split=train target=TIC 327700118 -> cache=graphs\images\327700118.png
+[COPY_OUT] split=test src=graphs\images\331038281.png -> data\plots\test\negatives\331038281.png
+[GENERATE_SYNTHETIC] split=test target=TIC 331038281 -> cache=graphs\images\331038281.png
+[COPY_OUT] split=test src=graphs\images\332248657.png -> data\plots\test\negatives\332248657.png
+[GENERATE_SYNTHETIC] split=test target=TIC 332248657 -> cache=graphs\images\332248657.png
+[COPY_OUT] split=test src=graphs\images\333778026.png -> data\plots\test\negatives\333778026.png
+[GENERATE_SYNTHETIC] split=test target=TIC 333778026 -> cache=graphs\images\333778026.png
+[COPY_OUT] split=train src=graphs\images\334293012.png -> data\plots\train\negatives\334293012.png
+[GENERATE_SYNTHETIC] split=train target=TIC 334293012 -> cache=graphs\images\334293012.png
+[COPY_OUT] split=train src=graphs\images\334771008.png -> data\plots\train\negatives\334771008.png
+[GENERATE_SYNTHETIC] split=train target=TIC 334771008 -> cache=graphs\images\334771008.png
+[COPY_OUT] split=train src=graphs\images\336225515.png -> data\plots\train\negatives\336225515.png
+[GENERATE_SYNTHETIC] split=train target=TIC 336225515 -> cache=graphs\images\336225515.png
+[COPY_OUT] split=train src=graphs\images\336399892.png -> data\plots\train\negatives\336399892.png
+[GENERATE_SYNTHETIC] split=train target=TIC 336399892 -> cache=graphs\images\336399892.png
+[COPY_OUT] split=train src=graphs\images\340110942.png -> data\plots\train\negatives\340110942.png
+[GENERATE_SYNTHETIC] split=train target=TIC 340110942 -> cache=graphs\images\340110942.png
+[COPY_OUT] split=val src=graphs\images\341197249.png -> data\plots\val\negatives\341197249.png
+[GENERATE_SYNTHETIC] split=val target=TIC 341197249 -> cache=graphs\images\341197249.png
+[COPY_OUT] split=train src=graphs\images\342848019.png -> data\plots\train\negatives\342848019.png
+[GENERATE_SYNTHETIC] split=train target=TIC 342848019 -> cache=graphs\images\342848019.png
+[COPY_OUT] split=train src=graphs\images\344977159.png -> data\plots\train\negatives\344977159.png
+[GENERATE_SYNTHETIC] split=train target=TIC 344977159 -> cache=graphs\images\344977159.png
+[COPY_OUT] split=train src=graphs\images\345660118.png -> data\plots\train\negatives\345660118.png
+[GENERATE_SYNTHETIC] split=train target=TIC 345660118 -> cache=graphs\images\345660118.png
+[COPY_OUT] split=train src=graphs\images\347332870.png -> data\plots\train\negatives\347332870.png
+[GENERATE_SYNTHETIC] split=train target=TIC 347332870 -> cache=graphs\images\347332870.png
+[COPY_OUT] split=val src=graphs\images\348997005.png -> data\plots\val\negatives\348997005.png
+[GENERATE_SYNTHETIC] split=val target=TIC 348997005 -> cache=graphs\images\348997005.png
+[COPY_OUT] split=train src=graphs\images\350113065.png -> data\plots\train\negatives\350113065.png
+[GENERATE_SYNTHETIC] split=train target=TIC 350113065 -> cache=graphs\images\350113065.png
+[COPY_OUT] split=train src=graphs\images\351180779.png -> data\plots\train\negatives\351180779.png
+[GENERATE_SYNTHETIC] split=train target=TIC 351180779 -> cache=graphs\images\351180779.png
+[COPY_OUT] split=train src=graphs\images\352041090.png -> data\plots\train\negatives\352041090.png
+[GENERATE_SYNTHETIC] split=train target=TIC 352041090 -> cache=graphs\images\352041090.png
+[COPY_OUT] split=test src=graphs\images\353406980.png -> data\plots\test\negatives\353406980.png
+[GENERATE_SYNTHETIC] split=test target=TIC 353406980 -> cache=graphs\images\353406980.png
+[COPY_OUT] split=train src=graphs\images\355152370.png -> data\plots\train\negatives\355152370.png
+[GENERATE_SYNTHETIC] split=train target=TIC 355152370 -> cache=graphs\images\355152370.png
+[COPY_OUT] split=train src=graphs\images\356095673.png -> data\plots\train\negatives\356095673.png
+[GENERATE_SYNTHETIC] split=train target=TIC 356095673 -> cache=graphs\images\356095673.png
+[COPY_OUT] split=train src=graphs\images\356932689.png -> data\plots\train\negatives\356932689.png
+[GENERATE_SYNTHETIC] split=train target=TIC 356932689 -> cache=graphs\images\356932689.png
+[COPY_OUT] split=train src=graphs\images\359668232.png -> data\plots\train\negatives\359668232.png
+[GENERATE_SYNTHETIC] split=train target=TIC 359668232 -> cache=graphs\images\359668232.png
+[COPY_OUT] split=val src=graphs\images\360153657.png -> data\plots\val\negatives\360153657.png
+[GENERATE_SYNTHETIC] split=val target=TIC 360153657 -> cache=graphs\images\360153657.png
+[COPY_OUT] split=val src=graphs\images\361908221.png -> data\plots\val\negatives\361908221.png
+[GENERATE_SYNTHETIC] split=val target=TIC 361908221 -> cache=graphs\images\361908221.png
+[COPY_OUT] split=test src=graphs\images\366221268.png -> data\plots\test\negatives\366221268.png
+[GENERATE_SYNTHETIC] split=test target=TIC 366221268 -> cache=graphs\images\366221268.png
+[COPY_OUT] split=train src=graphs\images\367366121.png -> data\plots\train\negatives\367366121.png
+[GENERATE_SYNTHETIC] split=train target=TIC 367366121 -> cache=graphs\images\367366121.png
+[COPY_OUT] split=train src=graphs\images\367614870.png -> data\plots\train\negatives\367614870.png
+[GENERATE_SYNTHETIC] split=train target=TIC 367614870 -> cache=graphs\images\367614870.png
+[COPY_OUT] split=val src=graphs\images\367670342.png -> data\plots\val\negatives\367670342.png
+[GENERATE_SYNTHETIC] split=val target=TIC 367670342 -> cache=graphs\images\367670342.png
+[COPY_OUT] split=train src=graphs\images\372962028.png -> data\plots\train\negatives\372962028.png
+[GENERATE_SYNTHETIC] split=train target=TIC 372962028 -> cache=graphs\images\372962028.png
+[COPY_OUT] split=train src=graphs\images\374008904.png -> data\plots\train\negatives\374008904.png
+[GENERATE_SYNTHETIC] split=train target=TIC 374008904 -> cache=graphs\images\374008904.png
+[COPY_OUT] split=train src=graphs\images\374093623.png -> data\plots\train\negatives\374093623.png
+[GENERATE_SYNTHETIC] split=train target=TIC 374093623 -> cache=graphs\images\374093623.png
+[COPY_OUT] split=train src=graphs\images\377090944.png -> data\plots\train\negatives\377090944.png
+[GENERATE_SYNTHETIC] split=train target=TIC 377090944 -> cache=graphs\images\377090944.png
+[COPY_OUT] split=train src=graphs\images\377424011.png -> data\plots\train\negatives\377424011.png
+[GENERATE_SYNTHETIC] split=train target=TIC 377424011 -> cache=graphs\images\377424011.png
+[COPY_OUT] split=train src=graphs\images\377663413.png -> data\plots\train\negatives\377663413.png
+[GENERATE_SYNTHETIC] split=train target=TIC 377663413 -> cache=graphs\images\377663413.png
+[COPY_OUT] split=train src=graphs\images\377771226.png -> data\plots\train\negatives\377771226.png
+[GENERATE_SYNTHETIC] split=train target=TIC 377771226 -> cache=graphs\images\377771226.png
+[COPY_OUT] split=train src=graphs\images\377780908.png -> data\plots\train\negatives\377780908.png
+[GENERATE_SYNTHETIC] split=train target=TIC 377780908 -> cache=graphs\images\377780908.png
+[COPY_OUT] split=train src=graphs\images\378554444.png -> data\plots\train\negatives\378554444.png
+[GENERATE_SYNTHETIC] split=train target=TIC 378554444 -> cache=graphs\images\378554444.png
+[COPY_OUT] split=train src=graphs\images\378996013.png -> data\plots\train\negatives\378996013.png
+[GENERATE_SYNTHETIC] split=train target=TIC 378996013 -> cache=graphs\images\378996013.png
+[COPY_OUT] split=test src=graphs\images\379430305.png -> data\plots\test\negatives\379430305.png
+[GENERATE_SYNTHETIC] split=test target=TIC 379430305 -> cache=graphs\images\379430305.png
+[COPY_OUT] split=train src=graphs\images\379836768.png -> data\plots\train\negatives\379836768.png
+[GENERATE_SYNTHETIC] split=train target=TIC 379836768 -> cache=graphs\images\379836768.png
+[COPY_OUT] split=train src=graphs\images\380771337.png -> data\plots\train\negatives\380771337.png
+[GENERATE_SYNTHETIC] split=train target=TIC 380771337 -> cache=graphs\images\380771337.png
+[COPY_OUT] split=train src=graphs\images\381771448.png -> data\plots\train\negatives\381771448.png
+[GENERATE_SYNTHETIC] split=train target=TIC 381771448 -> cache=graphs\images\381771448.png
+[COPY_OUT] split=train src=graphs\images\382771559.png -> data\plots\train\negatives\382771559.png
+[GENERATE_SYNTHETIC] split=train target=TIC 382771559 -> cache=graphs\images\382771559.png
+[COPY_OUT] split=train src=graphs\images\382879180.png -> data\plots\train\negatives\382879180.png
+[GENERATE_SYNTHETIC] split=train target=TIC 382879180 -> cache=graphs\images\382879180.png
+[COPY_OUT] split=train src=graphs\images\383119650.png -> data\plots\train\negatives\383119650.png
+[GENERATE_SYNTHETIC] split=train target=TIC 383119650 -> cache=graphs\images\383119650.png
+[COPY_OUT] split=val src=graphs\images\383232122.png -> data\plots\val\negatives\383232122.png
+[GENERATE_SYNTHETIC] split=val target=TIC 383232122 -> cache=graphs\images\383232122.png
+[COPY_OUT] split=train src=graphs\images\383731082.png -> data\plots\train\negatives\383731082.png
+[GENERATE_SYNTHETIC] split=train target=TIC 383731082 -> cache=graphs\images\383731082.png
+[COPY_OUT] split=train src=graphs\images\383771660.png -> data\plots\train\negatives\383771660.png
+[GENERATE_SYNTHETIC] split=train target=TIC 383771660 -> cache=graphs\images\383771660.png
+[COPY_OUT] split=val src=graphs\images\383902181.png -> data\plots\val\negatives\383902181.png
+[GENERATE_SYNTHETIC] split=val target=TIC 383902181 -> cache=graphs\images\383902181.png
+[COPY_OUT] split=val src=graphs\images\384771771.png -> data\plots\val\negatives\384771771.png
+[GENERATE_SYNTHETIC] split=val target=TIC 384771771 -> cache=graphs\images\384771771.png
+[COPY_OUT] split=train src=graphs\images\385771882.png -> data\plots\train\negatives\385771882.png
+[GENERATE_SYNTHETIC] split=train target=TIC 385771882 -> cache=graphs\images\385771882.png
+[COPY_OUT] split=test src=graphs\images\386770248.png -> data\plots\test\negatives\386770248.png
+[GENERATE_SYNTHETIC] split=test target=TIC 386770248 -> cache=graphs\images\386770248.png
+[COPY_OUT] split=train src=graphs\images\386771993.png -> data\plots\train\negatives\386771993.png
+[GENERATE_SYNTHETIC] split=train target=TIC 386771993 -> cache=graphs\images\386771993.png
+[COPY_OUT] split=train src=graphs\images\387619223.png -> data\plots\train\negatives\387619223.png
+[GENERATE_SYNTHETIC] split=train target=TIC 387619223 -> cache=graphs\images\387619223.png
+[COPY_OUT] split=train src=graphs\images\387771004.png -> data\plots\train\negatives\387771004.png
+[GENERATE_SYNTHETIC] split=train target=TIC 387771004 -> cache=graphs\images\387771004.png
+[COPY_OUT] split=test src=graphs\images\388320951.png -> data\plots\test\negatives\388320951.png
+[GENERATE_SYNTHETIC] split=test target=TIC 388320951 -> cache=graphs\images\388320951.png
+[COPY_OUT] split=train src=graphs\images\388535979.png -> data\plots\train\negatives\388535979.png
+[GENERATE_SYNTHETIC] split=train target=TIC 388535979 -> cache=graphs\images\388535979.png
+[COPY_OUT] split=train src=graphs\images\388771115.png -> data\plots\train\negatives\388771115.png
+[GENERATE_SYNTHETIC] split=train target=TIC 388771115 -> cache=graphs\images\388771115.png
+[COPY_OUT] split=train src=graphs\images\388922322.png -> data\plots\train\negatives\388922322.png
+[GENERATE_SYNTHETIC] split=train target=TIC 388922322 -> cache=graphs\images\388922322.png
+[COPY_OUT] split=train src=graphs\images\389771220.png -> data\plots\train\negatives\389771220.png
+[GENERATE_SYNTHETIC] split=train target=TIC 389771220 -> cache=graphs\images\389771220.png
+[COPY_OUT] split=val src=graphs\images\389771226.png -> data\plots\val\negatives\389771226.png
+[GENERATE_SYNTHETIC] split=val target=TIC 389771226 -> cache=graphs\images\389771226.png
+[COPY_OUT] split=val src=graphs\images\389997251.png -> data\plots\val\negatives\389997251.png
+[GENERATE_SYNTHETIC] split=val target=TIC 389997251 -> cache=graphs\images\389997251.png
+[COPY_OUT] split=train src=graphs\images\390771337.png -> data\plots\train\negatives\390771337.png
+[GENERATE_SYNTHETIC] split=train target=TIC 390771337 -> cache=graphs\images\390771337.png
+[COPY_OUT] split=train src=graphs\images\391233413.png -> data\plots\train\negatives\391233413.png
+[GENERATE_SYNTHETIC] split=train target=TIC 391233413 -> cache=graphs\images\391233413.png
+[COPY_OUT] split=val src=graphs\images\391771448.png -> data\plots\val\negatives\391771448.png
+[GENERATE_SYNTHETIC] split=val target=TIC 391771448 -> cache=graphs\images\391771448.png
+[COPY_OUT] split=train src=graphs\images\392771559.png -> data\plots\train\negatives\392771559.png
+[GENERATE_SYNTHETIC] split=train target=TIC 392771559 -> cache=graphs\images\392771559.png
+[COPY_OUT] split=train src=graphs\images\392853629.png -> data\plots\train\negatives\392853629.png
+[GENERATE_SYNTHETIC] split=train target=TIC 392853629 -> cache=graphs\images\392853629.png
+[COPY_OUT] split=val src=graphs\images\393771660.png -> data\plots\val\negatives\393771660.png
+[GENERATE_SYNTHETIC] split=val target=TIC 393771660 -> cache=graphs\images\393771660.png
+[COPY_OUT] split=train src=graphs\images\394738040.png -> data\plots\train\negatives\394738040.png
+[GENERATE_SYNTHETIC] split=train target=TIC 394738040 -> cache=graphs\images\394738040.png
+[COPY_OUT] split=train src=graphs\images\394771771.png -> data\plots\train\negatives\394771771.png
+[GENERATE_SYNTHETIC] split=train target=TIC 394771771 -> cache=graphs\images\394771771.png
+[COPY_OUT] split=train src=graphs\images\395230130.png -> data\plots\train\negatives\395230130.png
+[GENERATE_SYNTHETIC] split=train target=TIC 395230130 -> cache=graphs\images\395230130.png
+[COPY_OUT] split=val src=graphs\images\395729373.png -> data\plots\val\negatives\395729373.png
+[GENERATE_SYNTHETIC] split=val target=TIC 395729373 -> cache=graphs\images\395729373.png
+[COPY_OUT] split=val src=graphs\images\395771882.png -> data\plots\val\negatives\395771882.png
+[GENERATE_SYNTHETIC] split=val target=TIC 395771882 -> cache=graphs\images\395771882.png
+[COPY_OUT] split=test src=graphs\images\396028840.png -> data\plots\test\negatives\396028840.png
+[GENERATE_SYNTHETIC] split=test target=TIC 396028840 -> cache=graphs\images\396028840.png
+[COPY_OUT] split=train src=graphs\images\396496040.png -> data\plots\train\negatives\396496040.png
+[GENERATE_SYNTHETIC] split=train target=TIC 396496040 -> cache=graphs\images\396496040.png
+[COPY_OUT] split=val src=graphs\images\396771002.png -> data\plots\val\negatives\396771002.png
+[GENERATE_SYNTHETIC] split=val target=TIC 396771002 -> cache=graphs\images\396771002.png
+[COPY_OUT] split=train src=graphs\images\396771993.png -> data\plots\train\negatives\396771993.png
+[GENERATE_SYNTHETIC] split=train target=TIC 396771993 -> cache=graphs\images\396771993.png
+[COPY_OUT] split=train src=graphs\images\396833192.png -> data\plots\train\negatives\396833192.png
+[GENERATE_SYNTHETIC] split=train target=TIC 396833192 -> cache=graphs\images\396833192.png
+[COPY_OUT] split=train src=graphs\images\397771331.png -> data\plots\train\negatives\397771331.png
+[GENERATE_SYNTHETIC] split=train target=TIC 397771331 -> cache=graphs\images\397771331.png
+[COPY_OUT] split=train src=graphs\images\397772004.png -> data\plots\train\negatives\397772004.png
+[GENERATE_SYNTHETIC] split=train target=TIC 397772004 -> cache=graphs\images\397772004.png
+[COPY_OUT] split=train src=graphs\images\398051821.png -> data\plots\train\negatives\398051821.png
+[GENERATE_SYNTHETIC] split=train target=TIC 398051821 -> cache=graphs\images\398051821.png
+[COPY_OUT] split=train src=graphs\images\398217469.png -> data\plots\train\negatives\398217469.png
+[GENERATE_SYNTHETIC] split=train target=TIC 398217469 -> cache=graphs\images\398217469.png
+[COPY_OUT] split=train src=graphs\images\398440222.png -> data\plots\train\negatives\398440222.png
+[GENERATE_SYNTHETIC] split=train target=TIC 398440222 -> cache=graphs\images\398440222.png
+[COPY_OUT] split=test src=graphs\images\398483799.png -> data\plots\test\negatives\398483799.png
+[GENERATE_SYNTHETIC] split=test target=TIC 398483799 -> cache=graphs\images\398483799.png
+[COPY_OUT] split=test src=graphs\images\398660310.png -> data\plots\test\negatives\398660310.png
+[GENERATE_SYNTHETIC] split=test target=TIC 398660310 -> cache=graphs\images\398660310.png
+[COPY_OUT] split=train src=graphs\images\398772115.png -> data\plots\train\negatives\398772115.png
+[GENERATE_SYNTHETIC] split=train target=TIC 398772115 -> cache=graphs\images\398772115.png
+[COPY_OUT] split=train src=graphs\images\399771882.png -> data\plots\train\negatives\399771882.png
+[GENERATE_SYNTHETIC] split=train target=TIC 399771882 -> cache=graphs\images\399771882.png
+[COPY_OUT] split=train src=graphs\images\399772226.png -> data\plots\train\negatives\399772226.png
+[GENERATE_SYNTHETIC] split=train target=TIC 399772226 -> cache=graphs\images\399772226.png
+[COPY_OUT] split=train src=graphs\images\399991112.png -> data\plots\train\negatives\399991112.png
+[GENERATE_SYNTHETIC] split=train target=TIC 399991112 -> cache=graphs\images\399991112.png
+[COPY_OUT] split=train src=graphs\images\400772337.png -> data\plots\train\negatives\400772337.png
+[GENERATE_SYNTHETIC] split=train target=TIC 400772337 -> cache=graphs\images\400772337.png
+[COPY_OUT] split=train src=graphs\images\402231403.png -> data\plots\train\negatives\402231403.png
+[GENERATE_SYNTHETIC] split=train target=TIC 402231403 -> cache=graphs\images\402231403.png

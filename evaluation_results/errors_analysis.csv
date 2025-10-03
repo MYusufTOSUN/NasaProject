@@ -1,0 +1,5 @@
+image,true_label,predicted_label,confidence,prob_negative,prob_positive,correct
+004914423.png,negative,positive,0.999896764755249,0.00010319202,0.99989676,False
+011446443.png,negative,positive,0.9997060894966125,0.00029382433,0.9997061,False
+006032730.png,negative,positive,0.9937883019447327,0.006211701,0.9937883,False
+010489206.png,negative,positive,0.9733752012252808,0.026624754,0.9733752,False
