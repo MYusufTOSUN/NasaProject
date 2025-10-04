@@ -1,0 +1,13 @@
+{
+  "target": "SYNTHETIC_TEST",
+  "mission": "TEST",
+  "period": 0.841200112160015,
+  "true_period": 0.84,
+  "period_error_minutes": 1.7281615104216463,
+  "depth": 1.0,
+  "duration": 2.4000000000000004,
+  "snr": 11.064578941814402,
+  "power": 0.021229763159809782,
+  "data_points": 5000,
+  "time_span_days": 30.0
+}

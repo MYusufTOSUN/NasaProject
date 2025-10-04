@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Exoplanet Detector — Live Cosmos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg:#0a0e27; --card:#111538; --text:#e8ecff; --muted:#94a3b8;
+      --accent:#00d9ff; --purple:#7000ff; --pink:#ff0080;
+      --good:#00ff88; --bad:#ff4466; --ring:#2b356e;
+      --radius:16px; --shadow:0 12px 40px rgba(0,0,0,.35);
+    }
+    [data-theme="light"]{
+      --bg:#f6f8ff; --card:#ffffff; --text:#101225; --muted:#5b6683;
+      --accent:#2e7dff; --purple:#7a5cff; --pink:#ff5ca8;
+      --good:#00c27a; --bad:#ff3b53; --ring:#dfe5ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 10% 10%,#0e1240 0,var(--bg) 50%,#060a1a 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;transition:all .3s ease}
+    #stars{position:fixed;inset:0;z-index:-1;background:transparent}
+    .container{max-width:1200px;margin:auto;padding:26px 18px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:10px}
+    .title{font-size:22px;font-weight:800}
+    .mode{display:flex;gap:10px;align-items:center}
+    .mode button{border:1px solid var(--ring);background:transparent;color:var(--text);padding:6px 10px;border-radius:999px;cursor:pointer;transition:all .2s}
+    .mode button:hover{background:rgba(255,255,255,.1)}
+    .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+    [data-theme="light"] .card{background:#fff;border-color:#e9edf9}
+    label{display:block;margin:8px 0 6px 2px;color:#c7d2fe;font-size:13px}
+    [data-theme="light"] label{color:#3c4a7a}
+    input,select,button{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--ring);background:#0f1440;color:var(--text);transition:all .2s}
+    [data-theme="light"] input,[data-theme="light"] select{background:#f7f9ff;color:#101225}
+    [data-theme="light"] button{background:linear-gradient(90deg,var(--accent),var(--purple));color:white}
+    button{background:linear-gradient(90deg,var(--accent),var(--purple));border:0;cursor:pointer;font-weight:700}
+    button:hover{transform:translateY(-2px)}
+    button.secondary{background:#1a214f}
+    [data-theme="light"] button.secondary{background:#e9edf9;color:#3c4a7a}
+    .row{display:flex;gap:10px}
+    .row>*{flex:1}
+    .preview{margin-top:10px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative}
+    .preview img, .preview canvas{display:block;width:100%}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .badge{padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,.15)}
+    .ok{background:rgba(0,255,136,.12);border-color:rgba(0,255,136,.4)}
+    .warn{background:rgba(255,211,105,.12);border-color:rgba(255,211,105,.4)}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+    .gallery img{width:100%;height:110px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,.12);filter:saturate(1.1);cursor:pointer;transition:transform .2s}
+    .gallery img:hover{transform:scale(1.05)}
+    .toggle{display:flex;gap:8px;align-items:center}
+    .toggle input[type="checkbox"]{width:auto}
+    .result-box{margin-top:12px;padding:12px;background:rgba(0,217,255,.05);border:1px solid rgba(0,217,255,.2);border-radius:12px;display:none}
+    .result-box.show{display:block;animation:slideUp .3s ease}
+    @keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .result-text{font-size:14px;margin-bottom:6px}
+    .result-confidence{font-size:18px;font-weight:700;color:var(--accent)}
+    
+    @media(max-width:768px){
+      .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+
+  <div class="container">
+    <header>
+      <div class="title">🌌 A World Away — Exoplanet Detector (Live Cosmos)</div>
+      <div class="mode">
+        <div class="toggle">
+          <input id="animToggle" type="checkbox" checked />
+          <label for="animToggle" style="margin:0;cursor:pointer">Animation</label>
+        </div>
+        <button id="themeBtn">🌙 Observation</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <div class="card">
+        <label>Target Name</label>
+        <input id="target" placeholder="Kepler-10, TOI 700, KIC 1026032, TIC 25155310" />
+        <div class="row">
+          <div>
+            <label>Mission</label>
+            <select id="mission">
+              <option value="auto">auto</option>
+              <option value="Kepler">Kepler</option>
+              <option value="TESS">TESS</option>
+            </select>
+          </div>
+          <div><label>&nbsp;</label><button id="btnFetch" class="secondary">⭐ Star Info</button></div>
+        </div>
+        
+        <div class="row" style="margin-top:8px">
+          <button id="btnAnalyzeTarget">🔭 Analyze Target</button>
+        </div>
+
+        <div class="badges" id="badges"></div>
+
+        <!-- Replay (Canvas crossfade) -->
+        <div class="preview" id="replayBox" style="display:none">
+          <canvas id="replayCanvas"></canvas>
+        </div>
+        
+        <!-- Result Box -->
+        <div class="result-box" id="resultBox">
+          <div class="result-text">Prediction: <span id="predLabel">—</span></div>
+          <div class="result-text">Confidence: <span class="result-confidence" id="predConf">—</span></div>
+          <div class="result-text">Positive Probability: <span id="predPos">—</span> | Negative: <span id="predNeg">—</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: NASA Gallery + Upload -->
+      <div class="card">
+        <label>🌠 NASA Live Gallery (Exoplanet, Kepler, TESS)</label>
+        <div class="gallery" id="gallery">
+          <div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--muted)">Loading gallery...</div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label>📤 Upload Your Plot (PNG/JPEG)</label>
+          <input id="file" type="file" accept=".png,.jpg,.jpeg,.webp" />
+          <div class="row" style="margin-top:8px">
+            <button id="btnAnalyzeUpload">🚀 Analyze Upload</button>
+          </div>
+          <div class="preview" id="uploadPreview" style="display:none">
+            <img id="uploadImg" alt="Uploaded Image">
+          </div>
+          
+          <!-- Upload Result Box -->
+          <div class="result-box" id="uploadResultBox">
+            <div class="result-text">Prediction: <span id="uploadPredLabel">—</span></div>
+            <div class="result-text">Confidence: <span class="result-confidence" id="uploadPredConf">—</span></div>
+            <div class="result-text">Positive: <span id="uploadPredPos">—</span> | Negative: <span id="uploadPredNeg">—</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="margin-top:20px;text-align:center;color:var(--muted);font-size:12px">
+      🌟 Powered by YOLOv8 Classification • NASA MAST Data • Lightkurve • NASA Images API
+    </div>
+  </div>
+
+  <script>
+    const $ = s => document.querySelector(s);
+
+    // THEME
+    $('#themeBtn').onclick = () => {
+      const r = document.documentElement;
+      const cur = r.getAttribute('data-theme') || 'dark';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      r.setAttribute('data-theme', next);
+      $('#themeBtn').textContent = next === 'dark' ? '🌙 Observation' : '☀ Analysis';
+    };
+
+    // STARFIELD CANVAS (no asset)
+    (function(){
+      const canvas = $('#stars'), ctx = canvas.getContext('2d');
+      let w, h, stars = [], anim = true;
+      function resize(){ 
+        w = canvas.width = innerWidth; 
+        h = canvas.height = innerHeight; 
+        stars = Array.from({length: Math.min(400, Math.floor(w*h/6000))}, ()=>({
+          x: Math.random()*w, y: Math.random()*h, z: Math.random()*1.5+0.5, a: Math.random()*1
+        })); 
+      }
+      function draw(){
+        if(!anim) return;
+        ctx.clearRect(0,0,w,h);
+        for(const s of stars){
+          s.a += 0.02; 
+          const tw = (Math.sin(s.a)*0.5+0.5)*0.8 + 0.2;
+          ctx.fillStyle = 'rgba(255,255,255,' + (0.15 + tw*0.85) + ')';
+          ctx.fillRect(s.x, s.y, 1.2*s.z, 1.2*s.z);
+          s.x += 0.02*s.z; 
+          if(s.x>w) s.x=0;
+        }
+        requestAnimationFrame(draw);
+      }
+      resize(); 
+      addEventListener('resize', resize);
+      $('#animToggle').addEventListener('change', e => { 
+        anim = e.target.checked; 
+        if(anim) draw(); 
+      });
+      draw();
+    })();
+
+    // NASA IMAGES — assetsiz canlı galeri (Flask proxy)
+    async function loadGallery(){
+      try {
+        const res = await fetch('/nasa/images?q=exoplanet kepler tess&n=12');
+        const items = await res.json();
+        const g = $('#gallery'); 
+        g.innerHTML='';
+        if(!items || items.length === 0) {
+          g.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--muted)">No images found</div>';
+          return;
+        }
+        items.forEach(it=>{
+          const img = document.createElement('img');
+          img.loading = 'lazy';
+          img.src = it.thumb || it.href;
+          img.alt = it.title || 'NASA Image';
+          img.title = it.title || 'NASA Image';
+          g.appendChild(img);
+        });
+      } catch(err) {
+        console.error('Gallery load error:', err);
+        $('#gallery').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--muted)">Failed to load gallery</div>';
+      }
+    }
+    loadGallery();
+
+    function setBadges({ exists_in_mast, nasa_confirmed }){
+      const el = $('#badges'); 
+      el.innerHTML='';
+      const a = document.createElement('div'); 
+      a.className='badge ' + (exists_in_mast?'ok':'warn'); 
+      a.textContent = exists_in_mast?'✓ MAST Data':'⚠ No MAST Data'; 
+      el.appendChild(a);
+      const b = document.createElement('div'); 
+      b.className='badge ' + (nasa_confirmed?'ok':'warn'); 
+      b.textContent = nasa_confirmed?'✓ NASA Confirmed':'🚀 User Candidate'; 
+      el.appendChild(b);
+    }
+
+    async function fetchStar(){
+      const target = $('#target').value.trim();
+      const mission = $('#mission').value;
+      if(!target){ alert('Please enter a target name'); return; }
+      try {
+        const res = await fetch('/starinfo?target=' + encodeURIComponent(target) + '&mission=' + encodeURIComponent(mission));
+        const data = await res.json();
+        if(data.error){ alert(data.error); return; }
+        setBadges(data);
+      } catch(err) {
+        alert('Error fetching star info: ' + err.message);
+      }
+    }
+    $('#btnFetch').onclick = fetchStar;
+
+    // Replay — canvas crossfade (ham → phase)
+    let replayTimer = null;
+    function startReplay(rawB64, phaseB64){
+      const box = $('#replayBox');
+      const cvs = $('#replayCanvas');
+      const ctx = cvs.getContext('2d');
+      if(!rawB64 && !phaseB64){ 
+        box.style.display='none'; 
+        return; 
+      }
+      const imgA = new Image(), imgB = new Image();
+      imgA.src = rawB64 || phaseB64; 
+      imgB.src = phaseB64 || rawB64;
+      Promise.all([imgLoaded(imgA), imgLoaded(imgB)]).then(()=>{
+        const w = cvs.width = imgA.width, h = cvs.height = imgA.height;
+        box.style.display = 'block';
+        let t = 0, dir = 1;
+        function frame(){
+          if(!$('#animToggle').checked){ 
+            replayTimer = requestAnimationFrame(frame); 
+            return; 
+          }
+          t += dir*0.02;
+          if(t>=1){ t=1; dir=-1; }
+          if(t<=0){ t=0; dir=1; }
+          ctx.clearRect(0,0,w,h);
+          ctx.globalAlpha = 1; 
+          ctx.drawImage(imgA, 0, 0, w, h);
+          ctx.globalAlpha = t; 
+          ctx.drawImage(imgB, 0, 0, w, h);
+          ctx.globalAlpha = 1;
+          replayTimer = requestAnimationFrame(frame);
+        }
+        if(replayTimer) cancelAnimationFrame(replayTimer);
+        frame();
+      });
+    }
+    function imgLoaded(im){ 
+      return new Promise(res=>{ 
+        if(im.complete) res(); 
+        else im.onload = res; 
+      }); 
+    }
+
+    function showResult(boxId, labelId, confId, posId, negId, data) {
+      const box = $(boxId);
+      if(!data || data.prediction_label === 'N/A') {
+        box.classList.remove('show');
+        return;
+      }
+      $(labelId).textContent = data.prediction_label;
+      $(confId).textContent = (data.confidence || 0).toFixed(1) + '%';
+      $(posId).textContent = (data.prob_positive || 0).toFixed(1) + '%';
+      $(negId).textContent = (data.prob_negative || 0).toFixed(1) + '%';
+      box.classList.add('show');
+    }
+
+    async function analyzeFromTarget(){
+      const target = $('#target').value.trim();
+      const mission = $('#mission').value;
+      if(!target){ alert('Please enter a target name'); return; }
+      try {
+        const res = await fetch('/analyze',{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify({target_name:target, mission})
+        });
+        const data = await res.json();
+        if(data.error){ alert(data.error); return; }
+        
+        const raw = data.plots?.raw || null; 
+        const phase = data.plots?.phase || null;
+        startReplay(raw, phase);
+        
+        if(data.star_info){ 
+          setBadges(data.star_info); 
+        }
+        
+        showResult('#resultBox', '#predLabel', '#predConf', '#predPos', '#predNeg', data);
+      } catch(err) {
+        alert('Analysis error: ' + err.message);
+      }
+    }
+    $('#btnAnalyzeTarget').onclick = analyzeFromTarget;
+
+    // Upload analyze
+    async function analyzeUpload(){
+      const file = $('#file').files[0];
+      if(!file){ alert('Please select an image'); return; }
+      try {
+        const fd = new FormData(); 
+        fd.append('file', file);
+        const res = await fetch('/analyze',{method:'POST', body:fd});
+        const data = await res.json();
+        if(data.error){ alert(data.error); return; }
+        
+        $('#uploadPreview').style.display = 'block';
+        $('#uploadImg').src = data.plot;
+        
+        showResult('#uploadResultBox', '#uploadPredLabel', '#uploadPredConf', '#uploadPredPos', '#uploadPredNeg', data);
+      } catch(err) {
+        alert('Upload analysis error: ' + err.message);
+      }
+    }
+    $('#btnAnalyzeUpload').onclick = analyzeUpload;
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+ultralytics>=8.2.0
+lightkurve
+astropy
+astroquery
+flask
+pandas
+numpy
+matplotlib
+scikit-learn
+seaborn
+pillow
+tqdm
+pyyaml
+streamlit

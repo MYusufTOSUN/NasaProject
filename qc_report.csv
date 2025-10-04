@@ -1,0 +1,7 @@
+check,passed,critical_failures
+targets.csv,False,1
+data/plots/,False,1
+models/best.pt,False,1
+evaluation_results/,False,1
+scripts,True,0
+ek_dosyalar,True,0

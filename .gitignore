@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+runs/
+models/*.pt
+yolov8n-cls.pt
+app/static/temp/*
+evaluation_results/*.png
+index.csv
