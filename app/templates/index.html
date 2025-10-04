@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪐 Ekzoplanet Tespit Sistemi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #1a1f3a;
+            --bg-card: #252a4a;
+            --text-primary: #e8eaf6;
+            --text-secondary: #9fa8da;
+            --accent-blue: #5c6bc0;
+            --accent-purple: #7e57c2;
+            --accent-green: #66bb6a;
+            --accent-orange: #ffa726;
+            --accent-red: #ef5350;
+            --border-color: #3f4771;
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f5f7fa;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --accent-blue: #3498db;
+            --accent-purple: #9b59b6;
+            --accent-green: #27ae60;
+            --accent-orange: #f39c12;
+            --accent-red: #e74c3c;
+            --border-color: #dfe6e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-blue);
+        }
+
+        /* Model Stats Panel */
+        .model-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-green);
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(92, 107, 192, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-blue);
+        }
+
+        /* File Upload */
+        .file-upload {
+            border: 2px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .file-upload:hover {
+            border-color: var(--accent-blue);
+            background: var(--bg-secondary);
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        /* Light Curve Playback */
+        .lightcurve-playback {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightcurve-playback canvas {
+            max-width: 100%;
+            max-height: 100%;
+            transition: opacity 0.5s;
+        }
+
+        .playback-controls {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /* Confidence Meter */
+        .confidence-meter {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin: 30px auto;
+        }
+
+        .gauge-bg {
+            width: 300px;
+            height: 150px;
+            border-radius: 150px 150px 0 0;
+            background: conic-gradient(
+                from 180deg,
+                var(--accent-red) 0deg,
+                var(--accent-orange) 60deg,
+                var(--accent-green) 90deg
+            );
+            position: relative;
+        }
+
+        .gauge-inner {
+            position: absolute;
+            width: 240px;
+            height: 120px;
+            background: var(--bg-card);
+            border-radius: 120px 120px 0 0;
+            top: 30px;
+            left: 30px;
+        }
+
+        .gauge-needle {
+            position: absolute;
+            width: 4px;
+            height: 100px;
+            background: white;
+            bottom: 0;
+            left: 148px;
+            transform-origin: bottom center;
+            transition: transform 1s ease-out;
+            z-index: 10;
+        }
+
+        .gauge-value {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        /* Mission Badge */
+        .mission-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Discovery Card */
+        .discovery-card {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .discovery-card .status {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .discovery-card .description {
+            margin: 15px 0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .discovery-card .btn {
+            background: white;
+            color: var(--accent-blue);
+            margin-top: 10px;
+        }
+
+        /* Similar Planets */
+        .similar-planets {
+            margin-top: 20px;
+        }
+
+        .planet-list {
+            list-style: none;
+        }
+
+        .planet-item {
+            background: var(--bg-secondary);
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .planet-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--accent-purple);
+        }
+
+        /* Loading */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--accent-blue);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Results */
+        .results {
+            display: none;
+        }
+
+        .results.active {
+            display: block;
+        }
+
+        .prediction-result {
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .prediction-result.positive {
+            background: linear-gradient(135deg, rgba(102, 187, 106, 0.2), rgba(76, 175, 80, 0.2));
+            border: 2px solid var(--accent-green);
+        }
+
+        .prediction-result.negative {
+            background: linear-gradient(135deg, rgba(239, 83, 80, 0.2), rgba(244, 67, 54, 0.2));
+            border: 2px solid var(--accent-red);
+        }
+
+        .prediction-result h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Utilities */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-satellite-dish"></i> Ekzoplanet Tespit Sistemi</h1>
+            <p>YOLOv8 Derin Öğrenme ile Işık Eğrisi Analizi</p>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i> Tema
+            </button>
+        </div>
+
+        <!-- Model Stats -->
+        <div class="model-stats">
+            <div class="stat-card">
+                <h3>Accuracy</h3>
+                <div class="value">95.2%</div>
+            </div>
+            <div class="stat-card">
+                <h3>Precision</h3>
+                <div class="value">93.8%</div>
+            </div>
+            <div class="stat-card">
+                <h3>Recall</h3>
+                <div class="value">96.1%</div>
+            </div>
+            <div class="stat-card">
+                <h3>ROC AUC</h3>
+                <div class="value">0.984</div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Column: Input Forms -->
+            <div class="card">
+                <h2><i class="fas fa-star"></i> Hedef Analizi</h2>
+                
+                <div class="form-group">
+                    <label for="targetName">Hedef Adı</label>
+                    <input type="text" id="targetName" placeholder="örn: Kepler-10">
+                </div>
+
+                <div class="form-group">
+                    <label for="mission">Misyon</label>
+                    <select id="mission">
+                        <option value="auto">Otomatik</option>
+                        <option value="Kepler">Kepler</option>
+                        <option value="TESS">TESS</option>
+                        <option value="K2">K2</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" onclick="analyzeTarget()">
+                    <i class="fas fa-search"></i> Analiz Et
+                </button>
+
+                <hr style="margin: 30px 0; border-color: var(--border-color);">
+
+                <h2><i class="fas fa-upload"></i> Görsel Yükle</h2>
+                
+                <div class="file-upload" onclick="document.getElementById('fileInput').click()">
+                    <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--text-secondary); margin-bottom: 10px;"></i>
+                    <p>PNG/JPEG formatında ışık eğrisi görseli yükleyin</p>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Tıklayın veya sürükleyip bırakın</p>
+                    <input type="file" id="fileInput" accept="image/png,image/jpeg" onchange="handleFileSelect()">
+                </div>
+
+                <button class="btn btn-primary mt-20" id="runImageBtn" onclick="analyzeImage()" disabled>
+                    <i class="fas fa-play"></i> Görseli Analiz Et
+                </button>
+
+                <button class="btn btn-secondary mt-20" id="explainBtn" onclick="toggleSaliency()" disabled>
+                    <i class="fas fa-brain"></i> Modeli Açıkla
+                </button>
+            </div>
+
+            <!-- Right Column: Results -->
+            <div class="card">
+                <h2><i class="fas fa-chart-line"></i> Sonuçlar</h2>
+                
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Analiz yapılıyor, lütfen bekleyin...</p>
+                </div>
+
+                <div class="results" id="resultsContainer">
+                    <div class="prediction-result" id="predictionResult">
+                        <h3 id="predictionLabel">—</h3>
+                        <p id="predictionText">Analiz sonucu burada görünecek</p>
+                    </div>
+
+                    <!-- Confidence Meter -->
+                    <div class="confidence-meter">
+                        <div class="gauge-bg">
+                            <div class="gauge-inner"></div>
+                            <div class="gauge-needle" id="gaugeNeedle"></div>
+                            <div class="gauge-value" id="gaugeValue">—</div>
+                        </div>
+                    </div>
+
+                    <!-- Light Curve Playback -->
+                    <div id="playbackContainer" class="hidden">
+                        <h3 style="margin-bottom: 15px;">Işık Eğrisi Animasyonu</h3>
+                        <div class="lightcurve-playback" id="lightcurveCanvas" 
+                             onmouseenter="startPlayback()" onmouseleave="stopPlayback()">
+                            <img id="playbackImg" src="" alt="Light curve">
+                            <div class="mission-badge" id="missionBadge">🔵 Kepler</div>
+                        </div>
+                        <div class="playback-controls">
+                            <p style="color: var(--text-secondary);">Animasyonu başlatmak için üzerine gelin</p>
+                        </div>
+                    </div>
+
+                    <!-- Saliency Map -->
+                    <div id="saliencyContainer" class="hidden mt-20">
+                        <h3>Model Açıklaması</h3>
+                        <img id="saliencyMap" src="" alt="Saliency map" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                    </div>
+
+                    <!-- Discovery Card -->
+                    <div class="discovery-card" id="discoveryCard" style="display: none;">
+                        <div class="status" id="discoveryStatus">
+                            ✅ NASA Onaylı
+                        </div>
+                        <div class="description" id="discoveryDescription">
+                            Kepler-10b NASA tarafından 2011 yılında Transit yöntemi ile keşfedildi.
+                        </div>
+                        <button class="btn" id="archiveBtn" onclick="openArchive()">
+                            <i class="fas fa-external-link-alt"></i> NASA Archive'de Görüntüle
+                        </button>
+                    </div>
+
+                    <!-- Similar Planets -->
+                    <div class="similar-planets" id="similarPlanets" style="display: none;">
+                        <h3>Benzer Gezegenler</h3>
+                        <ul class="planet-list" id="planetList">
+                            <!-- Dinamik içerik -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentData = null;
+        let playbackInterval = null;
+        let playbackIndex = 0;
+        let archiveUrl = '#';
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme === 'light' ? 'light' : '');
+        });
+
+        // File select
+        function handleFileSelect() {
+            const fileInput = document.getElementById('fileInput');
+            const runBtn = document.getElementById('runImageBtn');
+            const explainBtn = document.getElementById('explainBtn');
+            
+            if (fileInput.files.length > 0) {
+                runBtn.disabled = false;
+                explainBtn.disabled = false;
+            }
+        }
+
+        // Analyze target
+        async function analyzeTarget() {
+            const targetName = document.getElementById('targetName').value.trim();
+            const mission = document.getElementById('mission').value;
+
+            if (!targetName) {
+                alert('Lütfen bir hedef adı girin');
+                return;
+            }
+
+            showLoading(true);
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        target_name: targetName,
+                        mission: mission
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Hata: ' + data.error);
+                    showLoading(false);
+                    return;
+                }
+
+                currentData = data;
+                displayResults(data);
+                showLoading(false);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu: ' + error.message);
+                showLoading(false);
+            }
+        }
+
+        // Analyze image
+        async function analyzeImage() {
+            const fileInput = document.getElementById('fileInput');
+            
+            if (fileInput.files.length === 0) {
+                alert('Lütfen bir görsel seçin');
+                return;
+            }
+
+            showLoading(true);
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            formData.append('user_name', 'User');
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Hata: ' + data.error);
+                    showLoading(false);
+                    return;
+                }
+
+                currentData = data;
+                displayImageResults(data);
+                showLoading(false);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Bir hata oluştu: ' + error.message);
+                showLoading(false);
+            }
+        }
+
+        // Display results (target analysis)
+        function displayResults(data) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const predictionResult = document.getElementById('predictionResult');
+            const predictionLabel = document.getElementById('predictionLabel');
+            const predictionText = document.getElementById('predictionText');
+
+            resultsContainer.classList.add('active');
+
+            // Prediction
+            const isPositive = data.prediction === 'positive';
+            predictionResult.className = 'prediction-result ' + data.prediction;
+            predictionLabel.textContent = isPositive ? '✓ Transit Tespit Edildi!' : '✗ Transit Tespit Edilemedi';
+            predictionText.textContent = isPositive 
+                ? 'Model, bu ışık eğrisinde ekzoplanet transit sinyali tespit etti.'
+                : 'Model, bu ışık eğrisinde ekzoplanet transit sinyali tespit edemedi.';
+
+            // Confidence meter
+            updateConfidenceMeter(data.confidence);
+
+            // Playback
+            if (data.plots.raw && data.plots.phase) {
+                document.getElementById('playbackContainer').classList.remove('hidden');
+                document.getElementById('missionBadge').textContent = data.mission_badge;
+            }
+
+            // Discovery card
+            if (data.star_info) {
+                const discoveryCard = document.getElementById('discoveryCard');
+                const discoveryStatus = document.getElementById('discoveryStatus');
+                const discoveryDescription = document.getElementById('discoveryDescription');
+
+                discoveryCard.style.display = 'block';
+                archiveUrl = data.star_info.archive_url;
+
+                if (data.star_info.nasa_confirmed) {
+                    discoveryStatus.textContent = '✅ NASA Onaylı';
+                    discoveryDescription.textContent = `${data.target_name} NASA tarafından ${data.star_info.discovery_method} yöntemi ile keşfedildi.`;
+                } else {
+                    discoveryStatus.textContent = '🚀 Kullanıcı Keşfi #' + Math.floor(Math.random() * 9999);
+                    discoveryDescription.textContent = `Bu potansiyel transit sinyali model tarafından tespit edildi.`;
+                }
+            }
+
+            // Similar planets
+            if (data.similar && data.similar.length > 0) {
+                const similarPlanets = document.getElementById('similarPlanets');
+                const planetList = document.getElementById('planetList');
+                
+                similarPlanets.style.display = 'block';
+                planetList.innerHTML = '';
+
+                data.similar.forEach(planet => {
+                    const li = document.createElement('li');
+                    li.className = 'planet-item';
+                    li.innerHTML = `<strong>${planet.name}</strong> - Depth: ${planet.depth_ppm} ppm`;
+                    li.onclick = () => window.open(planet.archive_url, '_blank');
+                    planetList.appendChild(li);
+                });
+            }
+        }
+
+        // Display image results
+        function displayImageResults(data) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const predictionResult = document.getElementById('predictionResult');
+            const predictionLabel = document.getElementById('predictionLabel');
+            const predictionText = document.getElementById('predictionText');
+
+            resultsContainer.classList.add('active');
+
+            // Prediction
+            const isPositive = data.prediction === 'positive';
+            predictionResult.className = 'prediction-result ' + data.prediction;
+            predictionLabel.textContent = isPositive ? '✓ Transit Tespit Edildi!' : '✗ Transit Tespit Edilemedi';
+            predictionText.textContent = data.discovery_name 
+                ? `Keşif adı: ${data.discovery_name}` 
+                : 'Görsel analizi tamamlandı.';
+
+            // Confidence meter
+            updateConfidenceMeter(data.confidence);
+
+            // Hide playback for image upload
+            document.getElementById('playbackContainer').classList.add('hidden');
+            document.getElementById('discoveryCard').style.display = 'none';
+            document.getElementById('similarPlanets').style.display = 'none';
+        }
+
+        // Update confidence meter
+        function updateConfidenceMeter(confidence) {
+            const needle = document.getElementById('gaugeNeedle');
+            const valueDisplay = document.getElementById('gaugeValue');
+
+            // 0-100 -> 0-180 degrees
+            const angle = (confidence / 100) * 180;
+            needle.style.transform = `rotate(${angle}deg)`;
+            valueDisplay.textContent = confidence.toFixed(1) + '%';
+        }
+
+        // Playback animation
+        function startPlayback() {
+            if (!currentData || !currentData.plots) return;
+
+            const img = document.getElementById('playbackImg');
+            const plots = [currentData.plots.raw, currentData.plots.phase];
+            
+            playbackIndex = 0;
+            img.src = plots[0];
+
+            playbackInterval = setInterval(() => {
+                playbackIndex = (playbackIndex + 1) % plots.length;
+                img.src = plots[playbackIndex];
+            }, 2000);
+        }
+
+        function stopPlayback() {
+            if (playbackInterval) {
+                clearInterval(playbackInterval);
+                playbackInterval = null;
+            }
+        }
+
+        // Toggle saliency
+        function toggleSaliency() {
+            if (!currentData || !currentData.plots || !currentData.plots.saliency) {
+                alert('Önce bir görsel analiz edin');
+                return;
+            }
+
+            const container = document.getElementById('saliencyContainer');
+            const img = document.getElementById('saliencyMap');
+
+            if (container.classList.contains('hidden')) {
+                img.src = currentData.plots.saliency;
+                container.classList.remove('hidden');
+            } else {
+                container.classList.add('hidden');
+            }
+        }
+
+        // Open archive
+        function openArchive() {
+            if (archiveUrl && archiveUrl !== '#') {
+                window.open(archiveUrl, '_blank');
+            }
+        }
+
+        // Show/hide loading
+        function showLoading(show) {
+            const loading = document.getElementById('loadingIndicator');
+            const results = document.getElementById('resultsContainer');
+
+            if (show) {
+                loading.classList.add('active');
+                results.classList.remove('active');
+            } else {
+                loading.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
+

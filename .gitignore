@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Sanal ortamlar
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Büyük çıktı klasörleri
+graphs/
+models/
+evaluation_results/
+data/plots/
+
+# Geçici dosyalar
+app/static/temp/*
+*.log
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model dosyaları (çok büyük)
+*.pt
+*.pth
+*.h5
+*.onnx
+
+# Veri dosyaları (opsiyonel - büyükse)
+# data/metadata/*.csv
+
